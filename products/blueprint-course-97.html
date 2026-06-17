@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Faceless AI Content Business Blueprint — IncomeOnAI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.7; background: #fff; }
+    .page { max-width: 760px; margin: 0 auto; padding: 48px 40px; }
+
+    .cover { text-align: center; padding: 80px 32px; background: linear-gradient(135deg, #0a0a1a 0%, #1e1b4b 50%, #312e81 100%); color: #fff; border-radius: 16px; margin-bottom: 48px; }
+    .cover .badge { display: inline-block; background: rgba(245,158,11,0.3); color: #fcd34d; font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; }
+    .cover h1 { font-size: 38px; font-weight: 800; line-height: 1.15; margin-bottom: 12px; background: linear-gradient(135deg, #fcd34d, #f97316); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .cover .subtitle { font-size: 16px; color: #c4b5fd; max-width: 560px; margin: 0 auto 24px; }
+    .cover .author { font-size: 13px; color: #94a3b8; }
+
+    h2 { font-size: 26px; font-weight: 800; color: #1a1a2e; margin: 56px 0 16px; padding-bottom: 8px; border-bottom: 3px solid #f59e0b; display: inline-block; }
+    h3 { font-size: 19px; font-weight: 700; color: #312e81; margin: 28px 0 12px; }
+    h4 { font-size: 15px; font-weight: 700; color: #4338ca; margin: 20px 0 8px; }
+    p { margin-bottom: 14px; font-size: 15px; }
+    ul, ol { margin: 8px 0 16px 20px; font-size: 14px; }
+    li { margin-bottom: 6px; }
+
+    .module-header { background: linear-gradient(135deg, #1e1b4b, #312e81); color: #fff; padding: 24px 28px; border-radius: 14px 14px 0 0; margin-top: 56px; }
+    .module-header .mod-num { font-size: 12px; font-weight: 700; color: #fcd34d; text-transform: uppercase; letter-spacing: 1px; }
+    .module-header h2 { color: #fff; border: none; margin: 8px 0 4px; display: block; padding: 0; font-size: 24px; }
+    .module-header .timeline { font-size: 13px; color: #a5b4fc; }
+    .module-body { background: #f8fafc; border: 2px solid #e2e8f0; border-top: none; border-radius: 0 0 14px 14px; padding: 28px; margin-bottom: 8px; }
+
+    .lesson { background: #fff; border: 1px solid #e2e8f0; border-radius: 10px; padding: 20px; margin: 16px 0; }
+    .lesson h4 { margin-top: 0; color: #1e1b4b; font-size: 16px; }
+    .lesson .lesson-tag { display: inline-block; background: #ede9fe; color: #6366f1; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 10px; margin-bottom: 8px; }
+
+    .action-box { background: #ecfdf5; border: 2px solid #a7f3d0; border-radius: 10px; padding: 18px; margin: 16px 0; }
+    .action-box h4 { color: #065f46; margin-top: 0; font-size: 14px; }
+
+    .callout { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 14px 18px; border-radius: 0 8px 8px 0; margin: 16px 0; font-size: 13px; }
+    .callout strong { color: #92400e; }
+
+    .checklist { list-style: none; padding: 0; margin: 12px 0; }
+    .checklist li { padding: 8px 12px; margin: 4px 0; background: #f0fdf4; border-radius: 6px; font-size: 13px; display: flex; align-items: flex-start; gap: 8px; }
+    .checklist li::before { content: "\\2610"; font-size: 16px; color: #16a34a; flex-shrink: 0; }
+
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 13px; }
+    th { background: #1e1b4b; color: #e0e7ff; padding: 10px 14px; text-align: left; font-weight: 600; }
+    td { padding: 8px 14px; border-bottom: 1px solid #e2e8f0; }
+    tr:nth-child(even) td { background: #f8fafc; }
+
+    .tool-stack { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 16px 0; }
+    .tool-item { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 14px; }
+    .tool-item .name { font-weight: 700; font-size: 14px; color: #1e1b4b; }
+    .tool-item .purpose { font-size: 12px; color: #64748b; }
+    .tool-item .cost { font-size: 12px; font-weight: 600; color: #059669; }
+
+    .deliverable { background: linear-gradient(135deg, #fef3c7, #fde68a); border: 2px solid #f59e0b; border-radius: 10px; padding: 16px 20px; margin: 16px 0; text-align: center; }
+    .deliverable strong { color: #92400e; font-size: 15px; }
+
+    .bonus-card { background: #fffbeb; border: 2px solid #fcd34d; border-radius: 12px; padding: 20px; margin: 16px 0; }
+    .bonus-card .bonus-tag { display: inline-block; background: #f59e0b; color: #fff; font-size: 11px; font-weight: 700; padding: 3px 10px; border-radius: 10px; margin-bottom: 8px; }
+
+    .footer { text-align: center; padding: 40px 0 20px; border-top: 2px solid #e2e8f0; margin-top: 48px; }
+    .footer p { font-size: 13px; color: #94a3b8; }
+    .footer a { color: #f59e0b; text-decoration: none; font-weight: 600; }
+
+    @media print {
+      .page { padding: 20px; }
+      .cover { padding: 40px 20px; break-after: page; }
+      .module-header { break-before: page; }
+      .lesson { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Cover -->
+  <div class="cover">
+    <div class="badge">The Complete Course &bull; IncomeOnAI</div>
+    <h1>The Faceless AI Content Business Blueprint</h1>
+    <p class="subtitle">The step-by-step system for building a $5K&ndash;$10K/month content business using AI &mdash; no camera, no coding, no experience required.</p>
+    <p class="author">By IncomeOnAI &bull; 6 Modules &bull; 90-Day System</p>
+  </div>
+
+  <!-- ==================== MODULE 1 ==================== -->
+  <div class="module-header">
+    <div class="mod-num">Module 1</div>
+    <h2>Foundation &mdash; Your Niche, Brand &amp; Tool Stack</h2>
+    <div class="timeline">Week 1 &bull; 4 Lessons &bull; ~3 hours total</div>
+  </div>
+  <div class="module-body">
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 1.1</span>
+      <h4>Picking a Niche That Has Money In It</h4>
+      <p>"Follow your passion" is advice from people who already have money. Your niche needs to pass three tests before you commit:</p>
+      <h4>The 3-Criteria Test</h4>
+      <ol>
+        <li><strong>Audience size:</strong> Can you find at least 50 pieces of content in this niche that have 100K+ views? If yes, there's demand. Search TikTok and YouTube for your niche keyword. Sort by most viewed. Count.</li>
+        <li><strong>Monetization paths:</strong> Can you name at least 3 ways to make money? (Affiliate products, digital products, sponsorships, ad revenue, services.) If you can only think of one, the niche is too narrow.</li>
+        <li><strong>AI-ability:</strong> Can AI produce good content in this niche? Test it: give Claude your niche topic and ask for 5 video ideas with hooks. If the output is generic garbage, the niche requires too much personal expertise for a faceless brand.</li>
+      </ol>
+      <p><strong>Niches that pass all 3:</strong></p>
+      <ul>
+        <li>AI tools and automation</li>
+        <li>Personal finance / investing basics</li>
+        <li>Side hustles / making money online</li>
+        <li>Productivity and self-improvement</li>
+        <li>Tech reviews and tutorials</li>
+        <li>Health/fitness tips (evidence-based, not medical advice)</li>
+        <li>Career development / remote work</li>
+      </ul>
+      <p><strong>Niches that fail:</strong> Anything requiring certification (legal, medical), anything hyper-local (real estate in one city), anything with zero product ecosystem (niche hobbies with no tools to sell).</p>
+      <div class="callout"><strong>Decision time:</strong> Pick ONE niche. Not two. Not a "blend." You can expand later, but starting broad kills your algorithm performance. The algorithm rewards accounts that are about one thing.</div>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 1.2</span>
+      <h4>Setting Up Your Brand in One Afternoon</h4>
+      <p>Your brand needs exactly 5 things. Not a logo designer, not a brand strategist, not a 47-page brand bible. Five things:</p>
+      <ol>
+        <li><strong>Handle:</strong> Same on every platform. Check availability on TikTok, YouTube, Instagram, and X before committing. Format: [BrandName] or [Name_Niche]. No underscores if possible.</li>
+        <li><strong>Bio:</strong> One line: what you help people do. Formula: "I help [audience] [achieve result] using [method]." Example: "I help people build AI income streams without showing their face."</li>
+        <li><strong>Profile image:</strong> Use Canva (free). Create a simple text-based logo or icon. Dark background, bold text, clean. Takes 10 minutes.</li>
+        <li><strong>Link-in-bio page:</strong> This is your entire business front door. Set up a simple page with: newsletter signup (top), lead magnet, products, affiliate links, social profiles. Free options: Carrd, GitHub Pages, Linktree.</li>
+        <li><strong>Email address:</strong> [brand]@gmail.com. Separate from personal. This goes on all platforms and in all business communications.</li>
+      </ol>
+      <div class="action-box">
+        <h4>Action Items</h4>
+        <ul class="checklist">
+          <li>Claim your handle on TikTok, YouTube, Instagram, X</li>
+          <li>Write your one-line bio (paste it on all platforms)</li>
+          <li>Create profile image in Canva (use same image everywhere)</li>
+          <li>Build link-in-bio page with newsletter CTA at top</li>
+          <li>Create brand email address</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 1.3</span>
+      <h4>The Exact Tool Stack</h4>
+      <p>Here's what you need, what it costs, and what you can skip. I'm listing the free tier first because you should start there.</p>
+      <div class="tool-stack">
+        <div class="tool-item"><div class="name">Claude AI</div><div class="purpose">Content brain &mdash; scripts, emails, strategy</div><div class="cost">Free (Pro: $20/mo)</div></div>
+        <div class="tool-item"><div class="name">Creatomate / InVideo AI</div><div class="purpose">Video generation from text</div><div class="cost">Free tier available</div></div>
+        <div class="tool-item"><div class="name">ElevenLabs</div><div class="purpose">AI voiceover</div><div class="cost">Free: 10K chars/mo ($5/mo: 30K)</div></div>
+        <div class="tool-item"><div class="name">Beehiiv</div><div class="purpose">Email newsletter + monetization</div><div class="cost">Free up to 2,500 subs</div></div>
+        <div class="tool-item"><div class="name">Buffer</div><div class="purpose">Social media scheduling</div><div class="cost">Free: 3 channels ($6/mo each extra)</div></div>
+        <div class="tool-item"><div class="name">Canva</div><div class="purpose">Thumbnails, graphics, carousels</div><div class="cost">Free (Pro: $13/mo)</div></div>
+        <div class="tool-item"><div class="name">Gumroad</div><div class="purpose">Sell digital products</div><div class="cost">Free (10% fee per sale)</div></div>
+        <div class="tool-item"><div class="name">Make.com</div><div class="purpose">Automation (connect everything)</div><div class="cost">Free: 1,000 ops/mo ($10/mo: 10K)</div></div>
+      </div>
+      <p><strong>Total cost to start: $0.</strong> Total cost when revenue supports upgrades: ~$50-80/month.</p>
+      <div class="callout"><strong>What to skip:</strong> Expensive course platforms (Teachable, Kajabi) &mdash; Gumroad is free. Premium stock footage subscriptions &mdash; AI generates visuals. Social media management suites &mdash; Buffer's free tier is enough to start. Professional editing software &mdash; you're faceless, AI handles production.</div>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 1.4</span>
+      <h4>Setting Up Your Accounts (Step-by-Step)</h4>
+      <p>Do these in order. Each one takes 5-10 minutes.</p>
+      <ol>
+        <li><strong>Claude AI</strong> &mdash; Sign up at claude.ai. This is your first tool because it helps you set up everything else.</li>
+        <li><strong>Beehiiv</strong> &mdash; Sign up at beehiiv.com. Create your publication. Set your "from" name to your brand name. Enable the referral program immediately (it's free and grows your list).</li>
+        <li><strong>Gumroad</strong> &mdash; Sign up at gumroad.com. Connect Stripe for payments. Don't create products yet &mdash; that's Module 5.</li>
+        <li><strong>TikTok</strong> &mdash; Create account with brand handle. Switch to Business Account (in settings). This unlocks analytics and link-in-bio.</li>
+        <li><strong>YouTube</strong> &mdash; Create a channel with brand name. Turn on Shorts monetization when eligible (1,000 subscribers, 10M Shorts views in 90 days).</li>
+        <li><strong>Instagram</strong> &mdash; Create account with brand handle. Switch to Professional Account. Choose "Digital Creator" category.</li>
+        <li><strong>Buffer</strong> &mdash; Sign up and connect your 3 social accounts (TikTok, YouTube, Instagram). You get 3 channels on the free Essentials plan.</li>
+        <li><strong>ElevenLabs</strong> &mdash; Sign up at elevenlabs.io. Choose a voice you'll use consistently. Save it as a favorite.</li>
+      </ol>
+    </div>
+
+    <div class="deliverable"><strong>Module 1 Deliverable:</strong> Your brand is live on all platforms, all tools are set up, and your link-in-bio page is published with a newsletter signup.</div>
+  </div>
+
+  <!-- ==================== MODULE 2 ==================== -->
+  <div class="module-header">
+    <div class="mod-num">Module 2</div>
+    <h2>The Content Engine &mdash; AI-Powered Creation</h2>
+    <div class="timeline">Week 2-3 &bull; 6 Lessons &bull; ~5 hours total</div>
+  </div>
+  <div class="module-body">
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 2.1</span>
+      <h4>The Content Flywheel: 1 Idea &rarr; 9+ Pieces</h4>
+      <p>Most creators think one idea = one piece of content. That's why they burn out. The flywheel model means every idea produces at minimum 9 assets:</p>
+      <ol>
+        <li><strong>Start with one topic</strong> (e.g., "3 AI tools that replace freelancers")</li>
+        <li><strong>TikTok video</strong> &mdash; 60-second script with hook</li>
+        <li><strong>YouTube Short</strong> &mdash; Same script, slightly adjusted pacing</li>
+        <li><strong>Instagram Reel</strong> &mdash; 30-second version, "save this" CTA</li>
+        <li><strong>X/Twitter thread</strong> &mdash; 5-tweet breakdown of the same topic</li>
+        <li><strong>LinkedIn post</strong> &mdash; Professional angle on the same insight</li>
+        <li><strong>Newsletter section</strong> &mdash; 300-word deeper dive with affiliate links</li>
+        <li><strong>Instagram carousel</strong> &mdash; 10-slide visual breakdown</li>
+        <li><strong>Pinterest pin</strong> &mdash; SEO-optimized graphic + description</li>
+        <li><strong>Quote cards</strong> &mdash; 2-3 shareable one-liners pulled from the content</li>
+      </ol>
+      <p><strong>Time investment:</strong> 45 minutes to produce the original script. 30 minutes to multiply it with the Content Multiplier prompt (Prompt 3 from the Prompt Pack). Total: 75 minutes for 9+ pieces of content.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 2.2</span>
+      <h4>Prompt Engineering for Content: Your Brand Voice</h4>
+      <p>The difference between generic AI content and content that sounds like YOUR brand is a voice prompt. Create this once, prefix it to every request:</p>
+      <div style="background:#0f172a; color:#e2e8f0; padding:16px 20px; border-radius:10px; font-family:monospace; font-size:12px; line-height:1.7; margin:12px 0; white-space:pre-wrap;">BRAND VOICE CONTEXT:
+You are writing content for [BRAND NAME], a faceless content brand in the [NICHE] space.
+
+TONE: Direct, conversational, no-BS. Write like a smart friend explaining something over coffee. Never corporate, never preachy, never "guru."
+
+AUDIENCE: [Describe your audience — age range, goals, frustrations, knowledge level]
+
+KEY PHRASES I USE:
+- [List 5-10 phrases that feel like your brand]
+- Example: "Here's the thing nobody tells you" / "The math doesn't lie" / "This isn't theory — this is what's actually working"
+
+PHRASES I NEVER USE:
+- "Game-changer" / "Revolutionary" / "Amazing" / "Incredible"
+- "Hey guys!" / "What's up everyone!"
+- Excessive exclamation points
+
+DEFAULT CTA: [Your go-to call to action]
+Example: "Link in bio for the free guide" or "Follow for more AI tools"
+
+MONETIZATION CONTEXT:
+- Products: [list and prices]
+- Affiliate tools: [list with referral links]
+- Mention affiliates naturally, never forcefully. Max 1 per content piece.</div>
+      <p>Save this as a text file. Copy-paste it before every Claude prompt. Your content will sound consistently like YOU, even though AI writes it.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 2.3</span>
+      <h4>Video Scripting with the H.A.V.E. Framework</h4>
+      <p>Every viral faceless video follows four beats: <strong>Hook, Agitate, Value, Exit-CTA.</strong></p>
+
+      <p><strong>Hook (0-3 seconds)</strong> &mdash; The first sentence determines everything. Formula: [Shocking result/number] + [Relatable context] + [Implied secret].</p>
+      <ul>
+        <li>"I made $6K/month posting AI videos I never appeared in"</li>
+        <li>"This free AI tool does in 5 minutes what editors charge $200 for"</li>
+      </ul>
+
+      <p><strong>Agitate (3-10 seconds)</strong> &mdash; Validate the viewer's problem, then pivot. Formula: [Common belief] + "But here's what nobody tells you" + [Reframe].</p>
+
+      <p><strong>Value (10-50 seconds)</strong> &mdash; 3 specific, actionable points. Each one: tool/method name + what it does + the result. Include one number per point.</p>
+
+      <p><strong>Exit-CTA (last 5-10 seconds)</strong> &mdash; ONE action. Not "follow AND check the link AND subscribe." ONE. Formula: "If you want [specific outcome], [single action]. Link in bio."</p>
+
+      <div class="callout"><strong>The 3-Second Rule:</strong> Your video's first 3 seconds must contain: a pattern interrupt, a specific number, an implied result, a curiosity gap, visual movement, caption on screen, and zero preamble. Score yourself &mdash; 7/7 is a potential viral hit.</div>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 2.4</span>
+      <h4>Producing Faceless Videos in Under 10 Minutes</h4>
+      <p>Here's the exact production workflow:</p>
+      <ol>
+        <li><strong>Generate script</strong> (2 min) &mdash; Use the Viral Video Script Engine prompt with your topic and platform.</li>
+        <li><strong>Generate voiceover</strong> (1 min) &mdash; Paste the script into ElevenLabs. Select your consistent voice. Download the MP3.</li>
+        <li><strong>Generate video</strong> (3 min) &mdash; Upload to Creatomate or InVideo AI. Select a template (9:16 vertical). Add voiceover as audio track. The tool auto-generates visuals, text overlays, and transitions.</li>
+        <li><strong>Review and adjust</strong> (2 min) &mdash; Watch the output. Trim any dead space. Check that captions match audio. Make sure the hook text appears in the first 2 seconds.</li>
+        <li><strong>Schedule</strong> (1 min) &mdash; Upload to Buffer. Set publish time. Add caption with hashtags.</li>
+      </ol>
+      <p><strong>Total: 9 minutes per video.</strong> Do 3 per day = 27 minutes of production for content that runs on 3 platforms.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 2.5</span>
+      <h4>The 25 Proven Hooks Library</h4>
+      <p>These are organized by niche. Copy-paste directly into your scripts.</p>
+      <p><strong>AI Tools:</strong> "I replaced my entire content team with 3 AI tools that cost $0" / "This AI tool writes, films, and edits videos &mdash; I just click publish" / "Stop paying editors. This free AI does it better in 5 minutes" / "The AI tool stack that's making faceless creators rich" / "I tested every AI video tool &mdash; here's the winner"</p>
+      <p><strong>Side Hustle:</strong> "I built a $3K/month business in 30 days without showing my face" / "The laziest side hustle that actually pays &mdash; fully automated" / "How I make money while I sleep (not crypto or dropshipping)" / "3 income streams that run on autopilot with AI" / "The side hustle nobody talks about because it's too easy"</p>
+      <p><strong>Productivity:</strong> "I do in 60 minutes what used to take all day" / "Delete these 3 apps and watch your productivity triple" / "I automated 80% of my job with AI and my boss doesn't know" / "The productivity hack billionaires use but never share" / "The morning routine that's making people rich"</p>
+      <p><strong>Finance:</strong> "This free tool finds money you didn't know you were losing" / "The $0 investment strategy that outperforms 90% of stock pickers" / "How to build 3 income streams before your next paycheck" / "The money rule nobody teaches in school" / "Rich people don't budget &mdash; they do THIS instead"</p>
+      <p><strong>Trending:</strong> "I let AI run my entire business for 30 days &mdash; here's what happened" / "The internet is about to change forever" / "I found the AI tool Silicon Valley doesn't want you to know" / "The most underrated way to make money online" / "The AI secret that turned a college student into a millionaire"</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 2.6</span>
+      <h4>Batch Content Creation: A Full Week in 2 Hours</h4>
+      <p>Don't create content daily. Batch it. Here's the 2-hour batch session:</p>
+      <table>
+        <tr><th>Time</th><th>Task</th><th>Output</th></tr>
+        <tr><td>0:00-0:15</td><td>Generate 20 hooks with Prompt 4</td><td>20 hooks, pick top 7</td></tr>
+        <tr><td>0:15-0:45</td><td>Write 7 video scripts with Prompt 1</td><td>7 scripts (1 per day)</td></tr>
+        <tr><td>0:45-1:00</td><td>Generate voiceovers for all 7</td><td>7 MP3 files</td></tr>
+        <tr><td>1:00-1:20</td><td>Produce all 7 videos</td><td>7 videos ready to post</td></tr>
+        <tr><td>1:20-1:40</td><td>Multiply 2 best scripts with Prompt 3</td><td>20+ extra content pieces</td></tr>
+        <tr><td>1:40-2:00</td><td>Schedule everything in Buffer</td><td>Full week queued</td></tr>
+      </table>
+      <p><strong>Result:</strong> 7 videos + 20 cross-platform pieces + newsletter content. All scheduled. The rest of your week is engagement and monitoring.</p>
+    </div>
+
+    <div class="deliverable"><strong>Module 2 Deliverable:</strong> Your first 7 days of content are produced, scheduled, and ready to post. You have a brand voice prompt and a repeatable 2-hour batch workflow.</div>
+  </div>
+
+  <!-- ==================== MODULE 3 ==================== -->
+  <div class="module-header">
+    <div class="mod-num">Module 3</div>
+    <h2>The Audience Machine &mdash; Growth Without Ads</h2>
+    <div class="timeline">Week 3-5 &bull; 5 Lessons &bull; ~4 hours total</div>
+  </div>
+  <div class="module-body">
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 3.1</span>
+      <h4>Platform Algorithms Decoded</h4>
+      <p>Each platform's algorithm optimizes for different signals. Understanding these means your content gets shown to more people organically:</p>
+      <table>
+        <tr><th>Platform</th><th>Primary Signal</th><th>Secondary Signal</th><th>What This Means</th></tr>
+        <tr><td>TikTok</td><td>Watch time %</td><td>Shares, replays</td><td>Hook hard, keep it short. A 30-sec video watched fully beats a 60-sec video watched halfway.</td></tr>
+        <tr><td>YouTube Shorts</td><td>Click-through rate</td><td>Watch time, subscribers gained</td><td>Thumbnail and title matter MORE than the video. Invest time in Prompt 7.</td></tr>
+        <tr><td>Instagram Reels</td><td>Saves</td><td>Shares, comments</td><td>Make content people want to reference later. "Save this" CTAs work because saves ARE the metric.</td></tr>
+        <tr><td>LinkedIn</td><td>Dwell time</td><td>Comments (especially early)</td><td>Long-form text posts that make people stop scrolling. Ask questions at the end.</td></tr>
+      </table>
+      <p><strong>The universal rule:</strong> Every platform rewards content that keeps people ON the platform longer. Your job is to be so interesting that viewers stop scrolling.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 3.2</span>
+      <h4>The 30-Day Launch Strategy</h4>
+      <p><strong>Week 1 (Days 1-7):</strong> Post 1 video per day on all 3 platforms. Same video, adapted caption. Goal: establish presence, test what the algorithm shows.</p>
+      <p><strong>Week 2 (Days 8-14):</strong> Increase to 2 videos per day. Start tracking which topics get more views. Double down on winners. Goal: find your content-market fit.</p>
+      <p><strong>Week 3 (Days 15-21):</strong> 2-3 videos per day. Start engaging with comments on similar creators' posts. Reply to every comment on your content within 1 hour. Goal: first 100-500 followers.</p>
+      <p><strong>Week 4 (Days 22-30):</strong> Maintain 2-3 videos per day. Add your lead magnet to link-in-bio. Start mentioning "free guide in bio" as CTA. Goal: first newsletter subscribers.</p>
+      <div class="callout"><strong>Reality check:</strong> Most accounts see minimal growth in the first 2 weeks. This is normal. The algorithm needs data on your content. Keep posting. The compound effect kicks in around day 15-20.</div>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 3.3</span>
+      <h4>Cross-Posting Strategy: 3x Reach Without 3x Work</h4>
+      <p>Post the same core video to all 3 platforms but adapt the caption:</p>
+      <ul>
+        <li><strong>TikTok caption:</strong> Short, punchy, 2-3 hashtags. End with a question to drive comments.</li>
+        <li><strong>YouTube Shorts:</strong> Longer description with keywords. First 2 lines matter most (shown before "...more"). Include #Shorts.</li>
+        <li><strong>Instagram Reels:</strong> Longer caption with value. 15-20 hashtags in a comment (not the caption). End with "Save this for later."</li>
+      </ul>
+      <p><strong>Timing:</strong> Don't post at the same time. Stagger by 2-3 hours. This prevents the platforms from detecting cross-posted content and suppressing it.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 3.4</span>
+      <h4>The Comment Strategy That Converts</h4>
+      <p>Engagement isn't just replying to your own comments. It's strategically appearing in other people's conversations:</p>
+      <ol>
+        <li><strong>Find 10 creators in your niche</strong> with 10K-100K followers (not millions &mdash; their comment sections are too crowded).</li>
+        <li><strong>Leave thoughtful comments</strong> on their posts within the first hour of posting. Not "Great post!" &mdash; add a genuine insight or personal experience.</li>
+        <li><strong>Reply to other commenters</strong> on those posts. Help people in the comments. This is where you get profile visits.</li>
+        <li><strong>Reply to every comment on your own posts</strong> within 1 hour. The algorithm boosts posts with active comment sections.</li>
+      </ol>
+      <p><strong>Time investment:</strong> 15 minutes/day. The ROI compounds &mdash; people who see your helpful comments visit your profile, see your content, and follow.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 3.5</span>
+      <h4>SEO and Hashtag Strategy Per Platform</h4>
+      <p><strong>TikTok:</strong> Use 3-5 hashtags. Mix broad (#ai, #sidehustle) with specific (#aitoolsformoney, #facelesscontent). TikTok's search is becoming a discovery engine &mdash; keywords in your caption matter now.</p>
+      <p><strong>YouTube:</strong> Title and description are SEO. Use keywords people actually search. Check YouTube search autocomplete &mdash; type your topic and see what it suggests. Those suggestions = real search volume.</p>
+      <p><strong>Instagram:</strong> 15-20 hashtags in first comment. Organize in tiers: 5 large (#entrepreneur, 1M+ posts), 5 medium (#aicontent, 100K-1M posts), 5 small (#facelessbrand, under 100K posts). The small hashtags are where you can rank.</p>
+    </div>
+
+    <div class="deliverable"><strong>Module 3 Deliverable:</strong> 30 days of consistent content posted. First 500+ followers across platforms. You know which content types perform best for your niche.</div>
+  </div>
+
+  <!-- ==================== MODULE 4 ==================== -->
+  <div class="module-header">
+    <div class="mod-num">Module 4</div>
+    <h2>The Funnel &mdash; Followers to Subscribers</h2>
+    <div class="timeline">Week 5-7 &bull; 5 Lessons &bull; ~4 hours total</div>
+  </div>
+  <div class="module-body">
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 4.1</span>
+      <h4>Why Followers Don't Matter (The Math)</h4>
+      <p>Consider two creators:</p>
+      <table>
+        <tr><th></th><th>Creator A</th><th>Creator B</th></tr>
+        <tr><td>Followers</td><td>50,000</td><td>5,000</td></tr>
+        <tr><td>Email list</td><td>0</td><td>2,000</td></tr>
+        <tr><td>Product ($27)</td><td>Ad revenue only</td><td>2% of list buys = 40 sales</td></tr>
+        <tr><td>Monthly revenue</td><td>$200-500 (views)</td><td>$1,080 (product) + $200 (affiliates)</td></tr>
+      </table>
+      <p>Creator B makes 2-3x more money with 10x fewer followers. The email list is the asset. Social media is the traffic source. Never confuse the two.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 4.2</span>
+      <h4>Creating a Lead Magnet That Converts at 20%+</h4>
+      <p>Your lead magnet is the bridge between "viewer" and "subscriber." It needs to pass the screenshot test: is it valuable enough that someone would screenshot it and send it to a friend?</p>
+      <p><strong>Formats that work:</strong></p>
+      <ul>
+        <li>"5 [Tools/Things] That [Specific Result]" &mdash; PDF guide (1,500-3,000 words)</li>
+        <li>"The [X]-Step [Result] Checklist" &mdash; Actionable checklist (1 page)</li>
+        <li>"[X] Prompts for [Specific Outcome]" &mdash; Prompt collection (copy-paste)</li>
+      </ul>
+      <p><strong>How to build one in 30 minutes:</strong> Use Prompt 8 (Lead Magnet Builder) from the Prompt Pack. Give it your niche, audience, and related paid product. It generates the complete content, landing page copy, and structure. Format in a clean HTML template, save as PDF.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 4.3</span>
+      <h4>Setting Up Beehiiv for Maximum Conversion</h4>
+      <p><strong>Essential setup:</strong></p>
+      <ol>
+        <li><strong>Publication name</strong> = your brand name. Keep it simple.</li>
+        <li><strong>Welcome email</strong> &mdash; Deliver the lead magnet immediately. First impression = trust. Don't sell in this email. Just deliver value and set expectations.</li>
+        <li><strong>Referral program</strong> &mdash; Enable it day one. Give existing subscribers a unique link. Offer a bonus (exclusive content, extra templates) for referring 3 friends. This is how lists grow exponentially.</li>
+        <li><strong>Custom subscription page</strong> &mdash; Match your brand colors. Headline: the benefit of subscribing. Subhead: what they get and how often.</li>
+      </ol>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 4.4</span>
+      <h4>The 5-Email Welcome Sequence</h4>
+      <p>This sequence runs automatically for every new subscriber. Set it once, it converts forever:</p>
+      <table>
+        <tr><th>Email</th><th>Day</th><th>Purpose</th><th>What to Write</th></tr>
+        <tr><td>1</td><td>Immediately</td><td>Deliver + build trust</td><td>Lead magnet link + "Here's what to expect from this newsletter"</td></tr>
+        <tr><td>2</td><td>Day 2</td><td>Quick win</td><td>One actionable tip they can use TODAY. No selling.</td></tr>
+        <tr><td>3</td><td>Day 4</td><td>Story + lesson</td><td>Share a relevant story (your journey or a result). Teach one thing.</td></tr>
+        <tr><td>4</td><td>Day 7</td><td>Soft pitch</td><td>Value-first email that mentions your product as "what I use" or "what helped me"</td></tr>
+        <tr><td>5</td><td>Day 10</td><td>Direct pitch</td><td>Clear offer with benefit, price, and CTA. P.S. line with scarcity or bonus.</td></tr>
+      </table>
+      <p>Use Prompt 2 (Email Money Machine) to generate the complete sequence. Customize the [brackets], review the output, and paste into Beehiiv automations.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 4.5</span>
+      <h4>Link-in-Bio Optimization</h4>
+      <p>Your link-in-bio page has ONE job: convert visitors into subscribers and buyers. Structure it top-to-bottom in priority order:</p>
+      <ol>
+        <li><strong>Newsletter signup</strong> (top) &mdash; "Get [lead magnet name] free" with email input</li>
+        <li><strong>Lead magnet direct link</strong> &mdash; Alternative CTA for the same free resource</li>
+        <li><strong>Products</strong> (price ascending) &mdash; $7, then $27, then $97</li>
+        <li><strong>Affiliate tools</strong> &mdash; "Tools I use" section with referral links</li>
+        <li><strong>Social links</strong> (bottom) &mdash; Other platforms</li>
+      </ol>
+      <p>Newsletter is at the top because email subscribers are worth more than one-time product buyers. They buy repeatedly over months and years.</p>
+    </div>
+
+    <div class="deliverable"><strong>Module 4 Deliverable:</strong> Email funnel is live. Lead magnet converts visitors to subscribers. Welcome sequence nurtures and sells on autopilot.</div>
+  </div>
+
+  <!-- ==================== MODULE 5 ==================== -->
+  <div class="module-header">
+    <div class="mod-num">Module 5</div>
+    <h2>The Money Layer &mdash; Products, Affiliates &amp; Services</h2>
+    <div class="timeline">Week 7-10 &bull; 6 Lessons &bull; ~5 hours total</div>
+  </div>
+  <div class="module-body">
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 5.1</span>
+      <h4>The Product Ladder: $7 &rarr; $27 &rarr; $97 &rarr; $29/mo &rarr; $499/mo</h4>
+      <p>One product at one price point is a gamble. A product ladder is a system. Each rung serves a different buyer and leads to the next:</p>
+      <table>
+        <tr><th>Price</th><th>Product Type</th><th>Purpose</th><th>Example</th></tr>
+        <tr><td>$7</td><td>Tripwire</td><td>Convert free viewers to paying customers. The price is so low the decision is impulse.</td><td>A checklist, template, or mini-guide</td></tr>
+        <tr><td>$27</td><td>Starter product</td><td>Deliver real value. Prove your premium content is worth paying for.</td><td>Prompt pack, tool kit, resource collection</td></tr>
+        <tr><td>$97</td><td>Flagship course</td><td>Complete system. This is your main revenue driver at scale.</td><td>Full course with modules, worksheets, templates</td></tr>
+        <tr><td>$29/mo</td><td>Community</td><td>Recurring revenue. Monthly income you can count on.</td><td>Skool or Discord community with exclusive content</td></tr>
+        <tr><td>$499/mo</td><td>Done-for-you</td><td>High-ticket service for people who want results without the work.</td><td>Manage their content pipeline</td></tr>
+      </table>
+      <p><strong>The psychology:</strong> A $7 buyer is 10x more likely to buy a $27 product than someone who's never paid you. The $7 tripwire doesn't exist for the revenue &mdash; it exists to create a customer relationship.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 5.2</span>
+      <h4>Creating Digital Products in One Weekend</h4>
+      <p>A digital product is: knowledge + structure + format. That's it.</p>
+      <p><strong>Saturday morning (2 hours):</strong> Pick a narrow problem your audience has. Use Prompt 5 (Product Description Converter) to write the sales page. Use Prompt 8 (Lead Magnet Builder) &mdash; modified for a paid product &mdash; to write the actual content.</p>
+      <p><strong>Saturday afternoon (2 hours):</strong> Format the content as a clean HTML document. Save as PDF. Design a simple cover in Canva (10 minutes).</p>
+      <p><strong>Sunday (1 hour):</strong> Upload to Gumroad. Set price. Add the sales page copy. Publish. Add to your link-in-bio page.</p>
+      <p><strong>Product ideas by format:</strong></p>
+      <ul>
+        <li><strong>PDF guides:</strong> "The 5-Step System for [Result]" (2,000-5,000 words)</li>
+        <li><strong>Prompt packs:</strong> 10-20 prompts organized by use case with instructions</li>
+        <li><strong>Template bundles:</strong> Notion templates, spreadsheets, checklists, swipe files</li>
+        <li><strong>Mini-courses:</strong> 5-10 text lessons with embedded video walkthroughs</li>
+      </ul>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 5.3</span>
+      <h4>Affiliate Marketing for AI Creators</h4>
+      <p>Affiliate marketing means recommending tools you use and earning a commission when someone signs up through your link. The best AI creator affiliate programs:</p>
+      <table>
+        <tr><th>Program</th><th>Commission</th><th>Cookie</th><th>Why It Converts</th></tr>
+        <tr><td>Beehiiv</td><td>50% recurring</td><td>90 days</td><td>Free tier removes friction. You show the tool working.</td></tr>
+        <tr><td>ElevenLabs</td><td>22%</td><td>30 days</td><td>Demo the voice quality in your videos. Proof sells.</td></tr>
+        <tr><td>Make.com</td><td>20% recurring</td><td>120 days</td><td>Show automations running. People want the same setup.</td></tr>
+        <tr><td>Pictory</td><td>25% recurring</td><td>30 days</td><td>Show the blog-to-video workflow. Visual proof.</td></tr>
+        <tr><td>InVideo AI</td><td>25%</td><td>30 days</td><td>Show the "type topic, get video" workflow.</td></tr>
+      </table>
+      <p><strong>The natural integration formula:</strong> Don't say "Use my link below." Say "I've been using [tool] for [time] and here's what happened..." Then show results. The link goes in bio, caption, or email &mdash; not in a forced pitch.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 5.4</span>
+      <h4>Embedding Affiliate Links in Every Content Type</h4>
+      <ul>
+        <li><strong>Videos:</strong> Mention the tool naturally in the value section. CTA: "Link in bio for the tools I use."</li>
+        <li><strong>Newsletters:</strong> "Tool Spotlight" section &mdash; 50-75 words recommending one tool with your affiliate link.</li>
+        <li><strong>Lead magnets:</strong> Recommend specific tools with links embedded in the PDF.</li>
+        <li><strong>Tweets/posts:</strong> "I use [tool] for [specific task]. Game-changer for [result]." Link in reply or bio.</li>
+        <li><strong>Product descriptions:</strong> "This system works best with [tool]" &mdash; naturally directs buyers to affiliate links.</li>
+      </ul>
+      <div class="callout"><strong>FTC rule:</strong> Always disclose affiliate relationships. "This contains affiliate links &mdash; I earn a commission at no cost to you." On social: #ad or #affiliate. In emails: small disclaimer at bottom. Non-negotiable.</div>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 5.5</span>
+      <h4>Pricing Psychology</h4>
+      <p><strong>Why $7 makes you $97 later:</strong> The first purchase creates a "buyer identity." Once someone pays you $7, they've crossed the psychological barrier from "follower" to "customer." Customers buy again. Followers just watch.</p>
+      <p><strong>Price anchoring:</strong> Always show the value comparison. "Freelance copywriter: $500. Online course: $297. This prompt pack: $27." The $27 feels like a steal because of the anchors above it.</p>
+      <p><strong>Launch pricing:</strong> "First 100 buyers get it at $97. Then it goes to $147." This is real scarcity &mdash; you actually raise the price. Not fake countdown timers. Genuine limited pricing builds trust and urgency simultaneously.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 5.6</span>
+      <h4>Gumroad Setup and Payment Optimization</h4>
+      <ol>
+        <li>Create your Gumroad account with your brand email.</li>
+        <li>Connect Stripe (Gumroad walks you through it &mdash; takes 5 minutes).</li>
+        <li>For each product: upload the PDF, paste your sales copy (from Prompt 5), set price, choose a clean URL slug.</li>
+        <li>Enable "Pay what you want" with a minimum &mdash; some people pay more than the listed price.</li>
+        <li>Set up a custom "thank you" page that links to your other products and newsletter.</li>
+        <li>Enable the affiliate program on Gumroad &mdash; let your buyers earn commission selling your products.</li>
+      </ol>
+    </div>
+
+    <div class="deliverable"><strong>Module 5 Deliverable:</strong> At least 2 revenue streams are live &mdash; one product on Gumroad and affiliate links in your content.</div>
+  </div>
+
+  <!-- ==================== MODULE 6 ==================== -->
+  <div class="module-header">
+    <div class="mod-num">Module 6</div>
+    <h2>The Autopilot System &mdash; Automation &amp; Scaling</h2>
+    <div class="timeline">Week 10-12 &bull; 5 Lessons &bull; ~4 hours total</div>
+  </div>
+  <div class="module-body">
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 6.1</span>
+      <h4>Automating Content Creation with AI Agents</h4>
+      <p>You've been creating content manually using prompts. Now we automate the entire pipeline:</p>
+      <p><strong>The automation stack:</strong></p>
+      <ol>
+        <li><strong>Make.com Scenario</strong> triggers daily at 6 AM.</li>
+        <li><strong>Claude AI module</strong> researches trending topics and generates a script with hooks.</li>
+        <li><strong>ElevenLabs module</strong> converts the script to voiceover.</li>
+        <li><strong>Creatomate module</strong> generates the video with voiceover and text overlays.</li>
+        <li><strong>Buffer modules</strong> post to TikTok, YouTube, and Instagram.</li>
+        <li><strong>Beehiiv module</strong> sends a newsletter draft based on the same topic.</li>
+      </ol>
+      <p><strong>Result:</strong> Every morning you wake up, your content is created, your video is rendered, and your posts are queued. Your only job is reviewing the output and engaging with comments.</p>
+      <p>Setup time: 2-3 hours for the initial configuration. After that, it runs itself.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 6.2</span>
+      <h4>Automating Distribution with Buffer + Make.com</h4>
+      <p>Buffer handles scheduling; Make.com handles the connection between AI output and Buffer input. The key integration points:</p>
+      <ul>
+        <li><strong>Buffer's GraphQL API</strong> accepts posts programmatically. Make.com sends the video URL, caption, and platform-specific metadata.</li>
+        <li><strong>Platform-specific adaptations</strong> happen in the pipeline: TikTok gets a short caption with hashtags, YouTube gets a title and description, Instagram gets a "save this" CTA.</li>
+        <li><strong>Error handling</strong> is critical: if one platform fails (API rate limit, content policy), the others still post. Set up "Skip" or "Resume" error handlers on every posting module.</li>
+      </ul>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 6.3</span>
+      <h4>Automating Email Sequences</h4>
+      <p>Beehiiv's automation features handle the repetitive email work:</p>
+      <ul>
+        <li><strong>Welcome sequence</strong> (Module 4) runs automatically for every new subscriber.</li>
+        <li><strong>Weekly newsletter</strong> &mdash; Use Make.com to auto-draft from your pipeline's daily content. Review and send once per week.</li>
+        <li><strong>Segmentation</strong> &mdash; Tag subscribers by how they found you (which lead magnet, which platform). Send targeted offers to each segment.</li>
+        <li><strong>Re-engagement</strong> &mdash; Set up a sequence for subscribers who haven't opened in 30 days. Either re-engage them or clean them off your list (Beehiiv charges by subscriber count).</li>
+      </ul>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 6.4</span>
+      <h4>Performance Tracking: What Makes Money, What Doesn't</h4>
+      <p>Track these numbers weekly (15 minutes):</p>
+      <table>
+        <tr><th>Metric</th><th>Where to Check</th><th>What It Tells You</th></tr>
+        <tr><td>Views per video</td><td>Platform analytics</td><td>Which topics your audience wants</td></tr>
+        <tr><td>Follower growth rate</td><td>Platform analytics</td><td>Whether your content attracts or repels</td></tr>
+        <tr><td>Email signup rate</td><td>Beehiiv analytics</td><td>Whether your CTA and lead magnet are working</td></tr>
+        <tr><td>Email open rate</td><td>Beehiiv analytics</td><td>Whether your subject lines hook (target: 40%+)</td></tr>
+        <tr><td>Product sales</td><td>Gumroad dashboard</td><td>Whether your funnel converts</td></tr>
+        <tr><td>Affiliate clicks</td><td>Each program dashboard</td><td>Which tools your audience wants</td></tr>
+      </table>
+      <p><strong>The weekly review:</strong> Every Sunday, 30 minutes. Check the numbers. Ask: What performed best? Why? Double down on what works. Cut what doesn't. Adjust your content calendar for the next week.</p>
+    </div>
+
+    <div class="lesson">
+      <span class="lesson-tag">Lesson 6.5</span>
+      <h4>Scaling: What Changes at Each Revenue Level</h4>
+      <table>
+        <tr><th>Revenue</th><th>Focus</th><th>What to Invest In</th></tr>
+        <tr><td>$0-500/mo</td><td>Content volume + consistency</td><td>Nothing &mdash; stay on free tiers. Reinvest time, not money.</td></tr>
+        <tr><td>$500-1K/mo</td><td>Funnel optimization</td><td>ElevenLabs Pro ($5/mo), Make.com Pro ($10/mo) for more automations.</td></tr>
+        <tr><td>$1K-3K/mo</td><td>Product expansion</td><td>Create your $97 product. Add a 4th social channel. Start paid lead gen ($50-100/mo).</td></tr>
+        <tr><td>$3K-5K/mo</td><td>Community + recurring revenue</td><td>Launch a $29/mo community (Skool or Discord). This stabilizes income.</td></tr>
+        <tr><td>$5K-10K/mo</td><td>Delegation + high-ticket</td><td>Offer done-for-you services ($499/mo). Hire a VA for engagement ($300-500/mo).</td></tr>
+      </table>
+      <p><strong>The key insight:</strong> At each level, the bottleneck changes. Early on, it's content volume. Then it's conversion rate. Then it's product variety. Then it's time. Solve the RIGHT bottleneck for your current level.</p>
+    </div>
+
+    <div class="deliverable"><strong>Module 6 Deliverable:</strong> Your business runs on 60-90 minutes/day of active work. Content creation, distribution, and email are automated. You have a weekly review system and know exactly what to invest in next.</div>
+  </div>
+
+  <!-- ==================== BONUSES ==================== -->
+  <h2>Bonuses</h2>
+
+  <div class="bonus-card">
+    <span class="bonus-tag">Bonus 1</span>
+    <h4>The IncomeOnAI Prompt Pack (10 Prompts &mdash; Normally $27)</h4>
+    <p>Every prompt referenced in this course. Copy-paste into Claude and produce content, emails, sales pages, calendars, and more. Included free with your Blueprint purchase.</p>
+  </div>
+
+  <div class="bonus-card">
+    <span class="bonus-tag">Bonus 2</span>
+    <h4>30-Day Content Calendar Template</h4>
+    <p>Pre-built template with exactly what to post each day for your first month. Includes content type, platform priority, CTA type, and monetization angle for every single day. Just fill in your niche and execute.</p>
+  </div>
+
+  <div class="bonus-card">
+    <span class="bonus-tag">Bonus 3</span>
+    <h4>Affiliate Program Application Templates</h4>
+    <p>Copy-paste email templates for applying to the top 10 affiliate programs. Includes what to say to get approved even with a small audience &mdash; the key is positioning yourself as a content creator, not an influencer.</p>
+  </div>
+
+  <!-- Revenue projection -->
+  <h2>The Revenue Trajectory</h2>
+  <table>
+    <tr><th>Timeline</th><th>What's Happening</th><th>Expected Revenue</th></tr>
+    <tr><td>Month 1</td><td>Content engine running, audience growing</td><td>$0-100</td></tr>
+    <tr><td>Month 2</td><td>Email list building, first product sales</td><td>$200-500</td></tr>
+    <tr><td>Month 3</td><td>Funnel converting, affiliates kicking in</td><td>$500-2,000</td></tr>
+    <tr><td>Month 6</td><td>Full system automated, compound growth</td><td>$3,000-5,000</td></tr>
+    <tr><td>Month 12</td><td>Multiple products, growing list, stacked affiliates</td><td>$5,000-10,000+</td></tr>
+  </table>
+  <p style="font-size:13px; color:#64748b; text-align:center; margin-top:8px;"><em>These aren't guarantees &mdash; they're the trajectory of the system when followed consistently.</em></p>
+
+  <div class="callout" style="text-align:center;">
+    <strong>30-Day Money-Back Guarantee.</strong> If you follow the system for 30 days and don't see results, email incomeonai@gmail.com for a full refund. No questions, no hoops.
+  </div>
+
+  <div class="footer">
+    <p><strong>The Faceless AI Content Business Blueprint</strong></p>
+    <p>Built by <a href="https://morningstar1898-eng.github.io/incomeonai-links/">IncomeOnAI</a></p>
+    <p>The same system behind IncomeOnAI, packaged for you.</p>
+    <p style="margin-top: 16px; font-size: 11px; color: #cbd5e1;">&copy; 2026 IncomeOnAI. All rights reserved. For personal use only. Do not redistribute.</p>
+  </div>
+
+</div>
+</body>
+</html>
