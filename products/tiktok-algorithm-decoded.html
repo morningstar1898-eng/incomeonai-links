@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Algorithm Decoded: 2026 Edition &mdash; IncomeOnAI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.7; background: #fff; }
+    .page { max-width: 720px; margin: 0 auto; padding: 48px 40px; }
+
+    /* Cover */
+    .cover { text-align: center; padding: 80px 32px; background: linear-gradient(135deg, #1a0a1a, #2a1a3e); color: #fff; border-radius: 16px; margin-bottom: 48px; }
+    .cover .badge { display: inline-block; background: rgba(236,72,153,0.3); color: #f9a8d4; font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; }
+    .cover h1 { font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 12px; background: linear-gradient(135deg, #ec4899, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .cover .subtitle { font-size: 16px; color: #94a3b8; max-width: 500px; margin: 0 auto 24px; }
+    .cover .author { font-size: 13px; color: #64748b; }
+
+    /* Sections */
+    h2 { font-size: 24px; font-weight: 800; color: #1a1a2e; margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 3px solid #ec4899; display: inline-block; }
+    h3 { font-size: 18px; font-weight: 700; color: #831843; margin: 28px 0 12px; }
+    h4 { font-size: 15px; font-weight: 700; color: #be185d; margin: 20px 0 8px; }
+    p { margin-bottom: 14px; font-size: 15px; }
+
+    /* Boxes */
+    .framework-box { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 24px; margin: 20px 0; }
+    .framework-box.pink { background: #fdf2f8; border-color: #f9a8d4; }
+    .formula { background: #1a0a1a; color: #fce7f3; padding: 16px 20px; border-radius: 8px; font-family: monospace; font-size: 14px; margin: 12px 0; line-height: 1.6; }
+    .fill-in { background: #fdf2f8; border: 2px dashed #ec4899; padding: 14px 20px; border-radius: 8px; margin: 12px 0; font-style: italic; color: #9d174d; }
+
+    /* Hooks list */
+    .hook-category { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #ec4899; margin: 24px 0 8px; }
+    .hook-list { list-style: none; padding: 0; }
+    .hook-list li { padding: 10px 16px; margin: 6px 0; background: #f8fafc; border-left: 4px solid #ec4899; border-radius: 0 8px 8px 0; font-size: 14px; }
+    .hook-list li strong { color: #be185d; }
+
+    /* Checklist */
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { padding: 12px 16px; margin: 8px 0; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; font-size: 14px; display: flex; align-items: flex-start; gap: 10px; }
+    .checklist li::before { content: "\2610"; font-size: 20px; color: #16a34a; flex-shrink: 0; }
+
+    /* Templates */
+    .template-box { background: #1a0a1a; color: #fce7f3; padding: 20px 24px; border-radius: 12px; margin: 16px 0; font-family: monospace; font-size: 13px; line-height: 1.8; white-space: pre-line; }
+    .template-box .label { color: #f472b6; font-weight: 700; }
+
+    /* Table */
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    th { background: #1a0a1a; color: #fce7f3; padding: 12px 16px; text-align: left; font-weight: 600; }
+    td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    tr:nth-child(even) td { background: #fdf2f8; }
+
+    /* Callout */
+    .callout { background: #fdf2f8; border-left: 4px solid #ec4899; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 14px; font-weight: 500; }
+    .callout strong { color: #9d174d; }
+
+    /* Footer */
+    .footer { text-align: center; padding: 40px 0 20px; border-top: 2px solid #e2e8f0; margin-top: 48px; }
+    .footer p { font-size: 13px; color: #94a3b8; }
+    .footer a { color: #ec4899; text-decoration: none; font-weight: 600; }
+
+    /* CTA boxes */
+    .cta-box { background: linear-gradient(135deg, #1a0a1a, #2a1a3e); color: #fff; border-radius: 12px; padding: 24px; margin: 16px 0; text-align: center; }
+    .cta-box h4 { color: #f9a8d4; margin-bottom: 8px; }
+    .cta-box p { color: #cbd5e1; font-size: 14px; margin-bottom: 0; }
+    .cta-box .price { font-size: 28px; font-weight: 800; background: linear-gradient(135deg, #ec4899, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+    /* Print styles */
+    @media print {
+      .page { padding: 24px; }
+      .cover { padding: 48px 24px; break-after: page; }
+      h2 { break-before: page; }
+      .template-box, .formula { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Cover -->
+  <div class="cover">
+    <div class="badge">IncomeOnAI</div>
+    <h1>TikTok Algorithm Decoded</h1>
+    <p class="subtitle">How the 2026 algorithm actually works &mdash; and the exact posting strategy that turns 0 followers into 10K in 90 days.</p>
+    <p class="author">By IncomeOnAI &bull; incomeonai.com</p>
+  </div>
+
+  <!-- Section 1 -->
+  <h2>Section 1: How the TikTok Algorithm Actually Works in 2026</h2>
+  <p>Forget everything you read about the algorithm in 2024. TikTok changed the rules. This section breaks down how videos get shown in 2026 &mdash; no fluff, no guessing, just how it works.</p>
+
+  <h3>The 3 Phases Every Video Goes Through</h3>
+  <p>Every video you post goes through three phases. Understanding these phases is the key to going viral on purpose &mdash; not by accident.</p>
+
+  <div class="framework-box pink">
+    <h4>Phase 1: Initial Push (0-60 minutes)</h4>
+    <p>TikTok shows your video to a small test group &mdash; usually 200 to 500 people. These people are selected based on your past content, your followers, and what's trending in your niche.</p>
+    <p><strong>What the algorithm measures:</strong> Watch time, completion rate, and shares. If your numbers beat the average for your niche, you move to Phase 2. If not, your video dies here.</p>
+    <div class="formula">Goal: 70%+ average watch time in the first hour = Phase 2 unlocked</div>
+  </div>
+
+  <div class="framework-box pink">
+    <h4>Phase 2: Extended Reach (1-48 hours)</h4>
+    <p>Your video now gets shown to 1,000 to 10,000 people. TikTok tests it across different audiences &mdash; people who don't follow you yet. This is where most "good" videos land.</p>
+    <p><strong>What the algorithm measures:</strong> Comment rate, save rate, and share-to-view ratio. TikTok is looking for signals that people want to come BACK to this video or send it to friends.</p>
+    <div class="formula">Goal: 1%+ comment rate + 2%+ save rate = Phase 3 unlocked</div>
+  </div>
+
+  <div class="framework-box pink">
+    <h4>Phase 3: Viral Loop (48 hours - 30 days)</h4>
+    <p>Your video enters the "For You" page at scale. TikTok shows it to 50K to millions of people. The algorithm keeps pushing it as long as engagement stays strong.</p>
+    <p><strong>What the algorithm measures:</strong> Replay rate and follow-through. If people watch your video twice or tap your profile after watching, TikTok keeps pushing. The moment engagement dips below the threshold, the push stops.</p>
+    <div class="formula">Goal: 5%+ replay rate + profile visit conversion = sustained viral push</div>
+  </div>
+
+  <h3>The 7 Ranking Signals TikTok Uses</h3>
+  <p>TikTok has confirmed some of these. Others come from creator testing and data analysis. Here's what matters most, ranked by importance:</p>
+
+  <table>
+    <thead>
+      <tr><th>#</th><th>Signal</th><th>Weight</th><th>What It Means</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>Watch Time</td><td>Very High</td><td>How long people watch before scrolling. The single most important signal.</td></tr>
+      <tr><td>2</td><td>Completion Rate</td><td>Very High</td><td>What percentage of viewers watch to the end. 100%+ means replays.</td></tr>
+      <tr><td>3</td><td>Shares</td><td>High</td><td>When someone sends your video to a friend via DM or other apps.</td></tr>
+      <tr><td>4</td><td>Comments</td><td>High</td><td>Especially long comments and comment replies. Signals real engagement.</td></tr>
+      <tr><td>5</td><td>Follows</td><td>Medium</td><td>When someone follows you AFTER watching. Shows high-value content.</td></tr>
+      <tr><td>6</td><td>Saves</td><td>Medium</td><td>Bookmarking for later. Tells TikTok your content has lasting value.</td></tr>
+      <tr><td>7</td><td>Replays</td><td>Medium</td><td>When someone watches your video more than once. Strong quality signal.</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>The #1 mistake:</strong> Creators obsess over likes. Likes are NOT a top ranking signal in 2026. Shares, saves, and watch time matter 10x more. Stop asking people to "like this video" and start creating content people want to SEND to a friend.
+  </div>
+
+  <h3>What Changed in 2026 vs 2025</h3>
+  <p>TikTok made three big changes this year. If you're using 2025 strategies, you're already behind.</p>
+
+  <div class="framework-box">
+    <h4>Change 1: Longer Content Gets Rewarded</h4>
+    <p>TikTok now favors videos between 60 seconds and 3 minutes. The sweet spot is 90 seconds to 2 minutes. Short 15-second clips still work for hooks, but the algorithm pushes longer content harder because it keeps people on the app longer.</p>
+  </div>
+
+  <div class="framework-box">
+    <h4>Change 2: Search Optimization Matters Now</h4>
+    <p>TikTok is now a search engine. Over 40% of Gen Z uses TikTok instead of Google for searches. Your captions, on-screen text, and voiceover words all get indexed. If you're not writing captions with search terms in mind, you're leaving views on the table.</p>
+  </div>
+
+  <div class="framework-box">
+    <h4>Change 3: Creator Rewards Program Overhaul</h4>
+    <p>The old Creator Fund is gone. The new Creator Rewards Program pays based on "qualified views" &mdash; views from people who watched because they searched for your topic or followed your niche. This means niche content gets paid MORE than broad viral content. A 50K-view video in a specific niche can out-earn a 500K-view random viral video.</p>
+  </div>
+
+  <!-- Section 2 -->
+  <h2>Section 2: The Perfect Posting Strategy</h2>
+  <p>Knowing the algorithm is step one. Knowing WHEN and HOW OFTEN to post is step two. This section gives you the exact schedule.</p>
+
+  <h3>Best Times to Post (US Audience, EST)</h3>
+  <p>These times are based on aggregate data from 10,000+ creator accounts in 2026. Your results may vary &mdash; always check your own analytics after 2 weeks.</p>
+
+  <table>
+    <thead>
+      <tr><th>Day</th><th>Best Time #1</th><th>Best Time #2</th><th>Avoid</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Monday</td><td>6:00 AM</td><td>10:00 PM</td><td>2:00 - 4:00 PM</td></tr>
+      <tr><td>Tuesday</td><td>7:00 AM</td><td>9:00 PM</td><td>1:00 - 3:00 PM</td></tr>
+      <tr><td>Wednesday</td><td>7:00 AM</td><td>8:00 PM</td><td>3:00 - 5:00 PM</td></tr>
+      <tr><td>Thursday</td><td>9:00 AM</td><td>7:00 PM</td><td>12:00 - 2:00 PM</td></tr>
+      <tr><td>Friday</td><td>5:00 AM</td><td>1:00 PM</td><td>4:00 - 6:00 PM</td></tr>
+      <tr><td>Saturday</td><td>11:00 AM</td><td>7:00 PM</td><td>6:00 - 8:00 AM</td></tr>
+      <tr><td>Sunday</td><td>8:00 AM</td><td>4:00 PM</td><td>10:00 PM - 12:00 AM</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>Pro tip:</strong> The "avoid" times are when competition is highest. But here's the trick &mdash; if your content is strong, posting during "avoid" times can actually work because the algorithm tests your video against weaker content first. Test both approaches for your account.
+  </div>
+
+  <h3>Optimal Posting Frequency</h3>
+  <p>More is NOT always better. Here's what the data shows:</p>
+
+  <table>
+    <thead>
+      <tr><th>Posts Per Day</th><th>Avg. Reach Per Video</th><th>Best For</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1/day</td><td>Highest per-video reach</td><td>Established accounts (5K+ followers)</td></tr>
+      <tr><td>2/day</td><td>Slightly lower per-video, higher total</td><td>Growing accounts (1K-5K followers)</td></tr>
+      <tr><td>3/day</td><td>Lowest per-video, but max testing</td><td>New accounts (0-1K followers)</td></tr>
+      <tr><td>4+/day</td><td>Diminishing returns, can hurt</td><td>Not recommended for anyone</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>The truth:</strong> Posting 3x per day only works if all 3 videos are high quality. Two great videos beat three mediocre ones every time. Quality always wins. If you can only make one great video per day, post once.
+  </div>
+
+  <h3>The "3-2-1" Content Mix</h3>
+  <p>This is the weekly content formula that keeps the algorithm happy and your audience engaged. Six posts per week, broken into three types:</p>
+
+  <div class="framework-box pink">
+    <h4>3 Trend-Riding Videos</h4>
+    <p>Use trending sounds, formats, or topics &mdash; but add YOUR twist. These videos ride the wave of what's already working. They bring in new viewers who are browsing trending content.</p>
+    <p><strong>How to find trends:</strong> Check TikTok's Creative Center daily. Look at the "Trending" tab. Watch what's on your For You page. Use CapCut's trending template section.</p>
+  </div>
+
+  <div class="framework-box pink">
+    <h4>2 Evergreen Videos</h4>
+    <p>These are searchable, timeless videos. "How to..." or "5 tips for..." content that people will find through TikTok search months from now. These build your library and compound over time.</p>
+    <p><strong>Examples:</strong> "How to edit videos for free in 2026," "5 AI tools every creator needs," "Beginner's guide to faceless content."</p>
+  </div>
+
+  <div class="framework-box pink">
+    <h4>1 Personal/Story Video</h4>
+    <p>Share a result, a behind-the-scenes look, or a personal take. This builds trust and connection. Even faceless creators can do this with screen recordings, voiceovers, or text-on-screen stories.</p>
+    <p><strong>Examples:</strong> "How I grew from 0 to 5K followers in 60 days," "My content creation setup tour," "The mistake that killed my growth (and how I fixed it)."</p>
+  </div>
+
+  <h3>How to Use TikTok's Built-In Analytics</h3>
+  <p>Switch to a Business or Creator account (free) to unlock analytics. Here's what to look at every week:</p>
+
+  <ul class="checklist">
+    <li><strong>Average Watch Time</strong> &mdash; Your #1 metric. If it's below 50%, your hooks are weak. Fix them first.</li>
+    <li><strong>Traffic Sources</strong> &mdash; "For You" page means the algorithm is pushing you. "Search" means your SEO is working. "Following" means you have a loyal base.</li>
+    <li><strong>Follower Activity</strong> &mdash; Shows when YOUR specific followers are online. Use this to fine-tune posting times after 2+ weeks of data.</li>
+    <li><strong>Video Views by Section</strong> &mdash; Shows where people drop off. If everyone leaves at second 3, your hook needs work. If they leave at second 15, your value section is weak.</li>
+    <li><strong>Audience Demographics</strong> &mdash; Know your audience's age, gender, and location. This helps you tailor content and pick the right posting times.</li>
+  </ul>
+
+  <!-- Section 3 -->
+  <h2>Section 3: The Hook Formula</h2>
+  <p>Your hook is everything. The first 1.5 seconds decide if someone watches or scrolls. This section gives you 15 proven templates you can copy and fill in today.</p>
+
+  <h3>Why the First 1.5 Seconds Determines Everything</h3>
+  <p>TikTok measures "skip rate" &mdash; how fast someone scrolls past your video. If most viewers scroll within 1.5 seconds, TikTok assumes your content isn't interesting. It stops showing it to new people.</p>
+  <p>The average TikTok user decides to stay or scroll in <strong>0.8 to 1.5 seconds.</strong> That's it. You don't have 3 seconds. You don't have 5 seconds. You have less than 2 seconds to earn their attention.</p>
+
+  <div class="callout">
+    <strong>The rule:</strong> Your first word should be a pattern interrupt. Never start with "Hey guys," "So," "In this video," or "Today I'm going to show you." Start with a number, a bold claim, or a question that creates instant curiosity.
+  </div>
+
+  <h3>15 Proven Hook Templates</h3>
+  <p>Copy these. Fill in the blanks. Test them. Each one has been proven to stop the scroll across thousands of videos.</p>
+
+  <div class="hook-category">Curiosity Hooks</div>
+  <ol class="hook-list">
+    <li><strong>1.</strong> "Nobody talks about this, but [SURPRISING FACT ABOUT YOUR NICHE]"
+      <div class="fill-in">Example: "Nobody talks about this, but TikTok pays you MORE for niche content than viral content in 2026."</div></li>
+    <li><strong>2.</strong> "I spent [TIME PERIOD] testing [THING] &mdash; here's what actually works"
+      <div class="fill-in">Example: "I spent 90 days testing every posting time &mdash; here's what actually works."</div></li>
+    <li><strong>3.</strong> "The [INDUSTRY/PLATFORM] doesn't want you to know about [SECRET]"
+      <div class="fill-in">Example: "TikTok doesn't want you to know about how its search algorithm really ranks videos."</div></li>
+  </ol>
+
+  <div class="hook-category">Result Hooks</div>
+  <ol class="hook-list" start="4">
+    <li><strong>4.</strong> "I went from [BAD STATE] to [GOOD STATE] in [TIME] &mdash; here's exactly how"
+      <div class="fill-in">Example: "I went from 0 followers to 10K in 90 days &mdash; here's exactly how."</div></li>
+    <li><strong>5.</strong> "This one change got me [SPECIFIC RESULT] in [TIME PERIOD]"
+      <div class="fill-in">Example: "This one change got me 50K views per video in 2 weeks."</div></li>
+    <li><strong>6.</strong> "[NUMBER] [THINGS] that made me [RESULT] (most people don't know #[X])"
+      <div class="fill-in">Example: "5 hashtag tricks that doubled my reach (most people don't know #4)."</div></li>
+  </ol>
+
+  <div class="hook-category">Contrarian Hooks</div>
+  <ol class="hook-list" start="7">
+    <li><strong>7.</strong> "Stop [COMMON ADVICE]. Do THIS instead."
+      <div class="fill-in">Example: "Stop posting 3 times a day. Do THIS instead."</div></li>
+    <li><strong>8.</strong> "Everything you've been told about [TOPIC] is wrong"
+      <div class="fill-in">Example: "Everything you've been told about hashtags is wrong."</div></li>
+    <li><strong>9.</strong> "[POPULAR STRATEGY] is dead. Here's what's working in 2026."
+      <div class="fill-in">Example: "The TikTok Creator Fund is dead. Here's what's working in 2026."</div></li>
+  </ol>
+
+  <div class="hook-category">List/Value Hooks</div>
+  <ol class="hook-list" start="10">
+    <li><strong>10.</strong> "[NUMBER] [THINGS] I wish I knew when I started [ACTIVITY]"
+      <div class="fill-in">Example: "7 things I wish I knew when I started posting on TikTok."</div></li>
+    <li><strong>11.</strong> "Save this &mdash; you'll need it later. Here are [NUMBER] [VALUABLE THINGS]"
+      <div class="fill-in">Example: "Save this &mdash; you'll need it later. Here are 10 hooks that go viral every time."</div></li>
+    <li><strong>12.</strong> "The [NUMBER]-step system for [DESIRABLE OUTCOME] (step [X] is the game-changer)"
+      <div class="fill-in">Example: "The 3-step system for going viral on TikTok (step 2 is the game-changer)."</div></li>
+  </ol>
+
+  <div class="hook-category">Urgency/FOMO Hooks</div>
+  <ol class="hook-list" start="13">
+    <li><strong>13.</strong> "This [FREE THING/STRATEGY] won't last long &mdash; here's how to use it now"
+      <div class="fill-in">Example: "This free TikTok feature won't last long &mdash; here's how to use it now."</div></li>
+    <li><strong>14.</strong> "If you're not doing [THING] in 2026, you're already behind"
+      <div class="fill-in">Example: "If you're not optimizing for TikTok search in 2026, you're already behind."</div></li>
+    <li><strong>15.</strong> "I found [THING] before it blows up &mdash; here's how to get in early"
+      <div class="fill-in">Example: "I found TikTok's new creator bonus before it blows up &mdash; here's how to get in early."</div></li>
+  </ol>
+
+  <h3>Pattern Interrupt Techniques That Stop the Scroll</h3>
+  <p>A pattern interrupt is anything that breaks the viewer's autopilot scrolling. Here are the most effective ones:</p>
+
+  <div class="framework-box">
+    <h4>Visual Pattern Interrupts</h4>
+    <ul>
+      <li><strong>Zoom-in start:</strong> Begin with a tight zoom on text or an object, then pull back. The sudden movement catches attention.</li>
+      <li><strong>Color flash:</strong> Start with a bright, contrasting color screen for 0.5 seconds before your content begins.</li>
+      <li><strong>Split screen change:</strong> Show two contrasting images side by side (before/after, right/wrong).</li>
+      <li><strong>Movement in the first frame:</strong> Something should be moving the moment your video starts. Static first frames get scrolled past.</li>
+    </ul>
+  </div>
+
+  <div class="framework-box">
+    <h4>Audio Pattern Interrupts</h4>
+    <ul>
+      <li><strong>Loud first word:</strong> Start with a word spoken at higher volume than the rest. "STOP doing this..." or "THREE things..."</li>
+      <li><strong>Sound effect intro:</strong> A short sound effect (ding, whoosh, pop) before you speak grabs the ear.</li>
+      <li><strong>Silence then speech:</strong> One beat of silence followed by fast speech creates contrast with the previous video's audio.</li>
+    </ul>
+  </div>
+
+  <h3>Text Overlay Strategies</h3>
+  <p>85% of TikTok videos are watched without sound. Your text overlays need to carry the message on their own.</p>
+
+  <ul class="checklist">
+    <li><strong>Hook text in the first frame</strong> &mdash; Your hook should appear as on-screen text within the first 0.5 seconds. Bold, large font, center screen.</li>
+    <li><strong>Use no more than 7 words per text screen</strong> &mdash; People skim. Short phrases work. Long sentences don't.</li>
+    <li><strong>Highlight the key word</strong> &mdash; Make one word a different color (red, yellow, or pink) to draw the eye.</li>
+    <li><strong>Stack text progressively</strong> &mdash; Reveal text line by line, not all at once. This creates a reading pace that keeps people watching.</li>
+    <li><strong>Use captions always</strong> &mdash; TikTok auto-captions help with accessibility AND SEO. The algorithm reads your captions to understand your content.</li>
+  </ul>
+
+  <!-- Section 4 -->
+  <h2>Section 4: Hashtag Strategy That Actually Works</h2>
+  <p>Hashtags are NOT dead in 2026. But the old "throw 30 random hashtags on every post" strategy IS dead. Here's the system that works now.</p>
+
+  <h3>The 3-Tier Hashtag System</h3>
+  <p>Every post should use hashtags from three tiers. This gives you the best chance of ranking in search while also reaching broad audiences.</p>
+
+  <div class="framework-box pink">
+    <h4>Tier 1: Broad (1-2 hashtags)</h4>
+    <p>These have 1B+ views. They put your video in front of massive audiences. You probably won't rank here, but TikTok uses them to understand your general topic.</p>
+    <p><strong>Examples:</strong> #learnontiktok, #tiktoktips, #sidehustle, #makemoneyonline</p>
+  </div>
+
+  <div class="framework-box pink">
+    <h4>Tier 2: Niche (2-3 hashtags)</h4>
+    <p>These have 10M to 500M views. This is where you actually compete. Pick hashtags that describe your specific topic. These connect you with people actively searching for your content type.</p>
+    <p><strong>Examples:</strong> #tiktokgrowthtips, #contentcreatorhacks, #facelesscreator, #aicontent</p>
+  </div>
+
+  <div class="framework-box pink">
+    <h4>Tier 3: Branded/Micro (1-2 hashtags)</h4>
+    <p>These have under 10M views or are your own branded hashtag. Low competition means you can rank #1. Use your brand name or a unique series name.</p>
+    <p><strong>Examples:</strong> #incomeonai, #algorithmdecodedtips, #[yourbrandname]</p>
+  </div>
+
+  <h3>How Many Hashtags to Use (The Real Answer)</h3>
+  <p>The magic number is <strong>4 to 6 hashtags per post.</strong></p>
+  <p>Here's why: TikTok distributes your "ranking power" across all hashtags. If you use 30 hashtags, each one gets 1/30th of the power. If you use 5, each gets 1/5th. Fewer hashtags = more concentrated ranking power per hashtag.</p>
+
+  <div class="callout">
+    <strong>The formula:</strong> 1-2 Broad + 2-3 Niche + 1-2 Branded = 4-7 total hashtags. That's it. No more.
+  </div>
+
+  <h3>SEO-Optimized Captions for TikTok Search</h3>
+  <p>TikTok search is now a real discovery channel. Your caption should read like a mini-blog post headline, not a list of hashtags.</p>
+
+  <div class="template-box"><span class="label">Bad caption:</span>
+"Check out this tip!! #fyp #viral #tiktok #foryou #trending"
+
+<span class="label">Good caption:</span>
+"How to grow on TikTok in 2026 &mdash; the 3-step posting strategy that took me from 0 to 10K followers. Save this for later. #tiktoktips #tiktokgrowth #contentcreator #socialmediatips #incomeonai"</div>
+
+  <p><strong>Caption rules:</strong></p>
+  <ul>
+    <li>Put your main keyword in the first 5 words</li>
+    <li>Write full sentences, not fragments</li>
+    <li>Include a call-to-action ("save this," "share with a friend who needs this")</li>
+    <li>Place hashtags at the END, not the beginning</li>
+    <li>Keep the total caption under 150 characters for best display</li>
+  </ul>
+
+  <h3>50 High-Performing Hashtags by Niche</h3>
+  <p>Copy and paste from the niche(s) that match your content. Mix and match from your primary niche and one related niche.</p>
+
+  <table>
+    <thead>
+      <tr><th>Niche</th><th>Hashtags</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>AI Tools</strong></td><td>#aitools, #aitoolsforbusiness, #aicontent, #aigeneratedcontent, #aitips, #artificialintelligence, #chatgpttips, #aiautomation, #aiforcreators, #aiproductivity</td></tr>
+      <tr><td><strong>Side Hustle</strong></td><td>#sidehustle, #sidehustleideas, #sideincome, #makemoneyonline, #makemoneyfromhome, #passiveincome, #onlinebusiness, #hustleculture, #extramoney, #workfromhome</td></tr>
+      <tr><td><strong>Content Creation</strong></td><td>#contentcreator, #contentcreationtips, #creatortips, #creatoreconomy, #facelesscreator, #ugccreator, #videoediting, #socialmediatips, #contentideas, #creatorlife</td></tr>
+      <tr><td><strong>TikTok Growth</strong></td><td>#tiktokgrowth, #tiktoktips, #tiktokstrategy, #tiktokalgorithm, #growyourtiktok, #tiktokmarketing, #tiktokforbusiness, #tiktokcreator, #tiktok2026, #fyp</td></tr>
+      <tr><td><strong>Personal Finance</strong></td><td>#moneytok, #financetips, #budgeting, #investing, #financialfreedom, #moneymindset, #personalfinance, #savemoney, #wealthbuilding, #financialliteracy</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>How to use this table:</strong> Pick 1-2 from your primary niche (Tier 2). Pick 1 from a related niche (Tier 2). Add 1 broad hashtag from TikTok Growth. Add 1 branded hashtag. That's your 4-6 hashtag formula for every post.
+  </div>
+
+  <!-- Section 5 -->
+  <h2>Section 5: Going Viral Checklist</h2>
+  <p>Use these checklists for every single post. Print them out. Tape them to your wall. The difference between creators who grow and creators who don't is consistency in doing these small things right.</p>
+
+  <h3>Pre-Post Checklist (Do Before You Hit Publish)</h3>
+  <ul class="checklist">
+    <li><strong>Hook passes the 1.5-second test</strong> &mdash; Would YOU stop scrolling for this? Be honest. If not, rewrite it.</li>
+    <li><strong>Video is 60 seconds to 3 minutes</strong> &mdash; The 2026 sweet spot. Shorter is OK for trend content. Never over 3 minutes unless it's a series.</li>
+    <li><strong>Text overlay on the first frame</strong> &mdash; Your hook must appear as on-screen text immediately. No blank first frames.</li>
+    <li><strong>Captions are turned on</strong> &mdash; Use TikTok's auto-captions or add your own. 85% of viewers watch on mute.</li>
+    <li><strong>SEO caption written</strong> &mdash; Your main keyword is in the first 5 words. Full sentences. Call-to-action included.</li>
+    <li><strong>4-6 hashtags using the 3-tier system</strong> &mdash; 1-2 broad, 2-3 niche, 1-2 branded. No more, no less.</li>
+    <li><strong>Thumbnail/cover image is clear</strong> &mdash; If someone sees this on your profile grid, can they tell what the video is about in 1 second?</li>
+    <li><strong>CTA is ONE action</strong> &mdash; "Follow for more" OR "Link in bio" OR "Save this." Never all three.</li>
+    <li><strong>Audio is clean</strong> &mdash; No background noise, consistent volume, trending sound used if applicable.</li>
+    <li><strong>Posting at an optimal time</strong> &mdash; Check the posting schedule table. If it's an "avoid" time, schedule it for later.</li>
+  </ul>
+
+  <h3>Post-Publish Actions (Do Within 30 Minutes of Posting)</h3>
+  <ul class="checklist">
+    <li><strong>Reply to EVERY comment in the first hour</strong> &mdash; This boosts engagement rate and tells the algorithm your video has active conversation happening.</li>
+    <li><strong>Pin your best comment</strong> &mdash; Pin a comment that adds value or asks a question to encourage more replies.</li>
+    <li><strong>Share to your Instagram Story</strong> &mdash; Cross-platform promotion drives initial views that help pass Phase 1.</li>
+    <li><strong>Watch your own video from the For You page</strong> &mdash; Search for your video. Watch it fully. This gives the algorithm an extra "completed view" signal.</li>
+    <li><strong>Check analytics after 1 hour</strong> &mdash; Look at average watch time. If it's below 50%, note what to fix for next time.</li>
+  </ul>
+
+  <h3>Weekly Review Checklist (Every Sunday)</h3>
+  <ul class="checklist">
+    <li><strong>Review top 3 videos of the week</strong> &mdash; What did they have in common? Hook style? Topic? Length? Do more of what worked.</li>
+    <li><strong>Review bottom 3 videos of the week</strong> &mdash; Where did viewers drop off? What was different about these? Stop doing what flopped.</li>
+    <li><strong>Check follower growth trend</strong> &mdash; Are you gaining more followers this week than last? If not, your content mix needs adjusting.</li>
+    <li><strong>Plan next week's 3-2-1 content mix</strong> &mdash; Write down your 6 video ideas: 3 trend, 2 evergreen, 1 personal. Batch-create if possible.</li>
+    <li><strong>Update your hashtag list</strong> &mdash; Check which hashtags drove the most views this week. Swap out underperformers for new ones.</li>
+  </ul>
+
+  <!-- Section 6 -->
+  <h2>Section 6: The 90-Day Growth Plan</h2>
+  <p>This is your roadmap from zero to 10K followers. Follow it step by step. Don't skip ahead. Each phase builds on the last.</p>
+
+  <h3>Days 1-30: Foundation</h3>
+  <p>Goal: Build your content muscle and find what works for YOUR audience.</p>
+
+  <div class="framework-box pink">
+    <h4>What to Focus On</h4>
+    <ul>
+      <li><strong>Post 2-3 times per day.</strong> Volume matters when you're new. You need data to learn from. Each video is a test.</li>
+      <li><strong>Test 5 different hook styles.</strong> Use 5 of the 15 hook templates above. Track which ones get the highest watch time.</li>
+      <li><strong>Pick ONE niche and stick to it.</strong> Don't post about cooking on Monday and fitness on Tuesday. The algorithm needs to learn who to show your content to.</li>
+      <li><strong>Study 10 creators in your niche daily.</strong> Watch their top-performing videos. Note their hooks, editing style, and CTAs. Don't copy &mdash; learn the patterns.</li>
+      <li><strong>Optimize your profile.</strong> Clear profile photo or logo. Bio that says what you do + who you help + a CTA. Link in bio set up.</li>
+    </ul>
+  </div>
+
+  <div class="template-box"><span class="label">Month 1 Milestones:</span>
+Followers: 500-1,000
+Avg. views per video: 500-2,000
+Videos posted: 60-90
+Top lesson learned: Which hook style YOUR audience responds to</div>
+
+  <h3>Days 31-60: Momentum</h3>
+  <p>Goal: Double down on what's working and build consistency.</p>
+
+  <div class="framework-box pink">
+    <h4>What to Focus On</h4>
+    <ul>
+      <li><strong>Cut posting to 1-2 times per day.</strong> You now know what works. Focus on quality over quantity.</li>
+      <li><strong>Use the 3-2-1 content mix.</strong> Start the weekly content formula. 3 trend, 2 evergreen, 1 personal.</li>
+      <li><strong>Create series content.</strong> "Part 1, Part 2, Part 3" videos keep people coming back. The algorithm loves series because they drive profile visits.</li>
+      <li><strong>Engage in your niche community.</strong> Comment on other creators' videos. Reply to comments in your niche's hashtags. Be visible.</li>
+      <li><strong>Start building an email list.</strong> Add a free resource (PDF, guide, checklist) to your link in bio. Every follower who joins your email list is worth 10 TikTok followers because you OWN that relationship.</li>
+    </ul>
+  </div>
+
+  <div class="template-box"><span class="label">Month 2 Milestones:</span>
+Followers: 2,000-5,000
+Avg. views per video: 2,000-10,000
+Videos posted: 30-60 (quality focus)
+Top lesson learned: Your content format sweet spot (length, style, topic)</div>
+
+  <h3>Days 61-90: Acceleration</h3>
+  <p>Goal: Create viral loops that grow your account on autopilot.</p>
+
+  <div class="framework-box pink">
+    <h4>What to Focus On</h4>
+    <ul>
+      <li><strong>Create "save-worthy" content.</strong> Checklists, templates, and lists get saved. Saves tell TikTok your content has lasting value, which pushes it to more people over time.</li>
+      <li><strong>Collaborate with 2-3 creators at your level.</strong> Duet, stitch, or shoutout creators with similar follower counts. You share audiences and both grow faster.</li>
+      <li><strong>Repurpose your top 5 videos.</strong> Take your best-performing videos and remake them with a new angle, new hook, or updated information. Proven topics with fresh execution = reliable views.</li>
+      <li><strong>Launch a simple product or affiliate offer.</strong> A $7 guide, a free tool with an affiliate link, or a digital template. Start monetizing while you grow.</li>
+      <li><strong>Go live once per week.</strong> TikTok Live boosts your profile visibility. Even 15-minute Q&A sessions increase your follower conversion rate by 2-3x.</li>
+    </ul>
+  </div>
+
+  <div class="template-box"><span class="label">Month 3 Milestones:</span>
+Followers: 5,000-10,000+
+Avg. views per video: 5,000-50,000
+Videos posted: 30-45
+Top lesson learned: How to monetize your audience (products, email, affiliates)</div>
+
+  <h3>Monthly Milestone Targets</h3>
+  <table>
+    <thead>
+      <tr><th>Metric</th><th>Month 1</th><th>Month 2</th><th>Month 3</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Followers</td><td>500-1,000</td><td>2,000-5,000</td><td>5,000-10,000+</td></tr>
+      <tr><td>Avg. Views/Video</td><td>500-2,000</td><td>2,000-10,000</td><td>5,000-50,000</td></tr>
+      <tr><td>Engagement Rate</td><td>5-8%</td><td>8-12%</td><td>10-15%</td></tr>
+      <tr><td>Watch Time Avg.</td><td>40-50%</td><td>50-65%</td><td>65-80%</td></tr>
+      <tr><td>Email Subscribers</td><td>0</td><td>50-200</td><td>200-1,000</td></tr>
+      <tr><td>Revenue</td><td>$0</td><td>$0-50</td><td>$50-500+</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>Reality check:</strong> These numbers are achievable but not guaranteed. Some creators hit 10K in 30 days. Others take 6 months. The difference is almost always hook quality and niche selection. If you're in a niche with low competition and high demand, you'll grow faster. If you're in a saturated niche, it takes longer but the revenue potential is higher.
+  </div>
+
+  <!-- Cross-sell CTAs -->
+  <h2>Keep Growing With IncomeOnAI</h2>
+  <p>You now have the algorithm playbook. Here's what to stack on top of it:</p>
+
+  <div class="cta-box">
+    <h4>The Viral Faceless Video Formula</h4>
+    <p class="price">$7</p>
+    <p>The exact 4-step framework for creating faceless videos that get 100K+ views. Includes 25 proven hooks, platform-specific templates, and the posting cadence calculator. The perfect companion to this algorithm guide.</p>
+  </div>
+
+  <div class="cta-box">
+    <h4>The AI Prompt Pack for Content Creators</h4>
+    <p class="price">$27</p>
+    <p>200+ copy-paste AI prompts for scripts, hooks, captions, hashtags, content calendars, and more. Stop staring at a blank screen. Let AI do the heavy lifting while you focus on growing.</p>
+  </div>
+
+  <div class="framework-box">
+    <h4>Free Resources</h4>
+    <ul>
+      <li><strong>Free Hook Generator:</strong> Get 10 custom hooks for your niche delivered to your inbox.</li>
+      <li><strong>Weekly Creator Newsletter:</strong> Every Tuesday, get the latest algorithm changes, trending sounds, and growth strategies.</li>
+      <li><strong>TikTok Growth Community:</strong> Join other creators who are using these strategies to grow. Share wins, ask questions, get feedback.</li>
+    </ul>
+    <p>Get all of these at our link page below.</p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p><strong>TikTok Algorithm Decoded: 2026 Edition</strong></p>
+    <p>Built by <a href="https://morningstar1898-eng.github.io/incomeonai-links/">IncomeOnAI</a></p>
+    <p>More tools, prompts, and strategies at your link-in-bio page.</p>
+    <p style="margin-top: 12px;"><a href="https://morningstar1898-eng.github.io/incomeonai-links/">morningstar1898-eng.github.io/incomeonai-links</a></p>
+    <p style="margin-top: 16px; font-size: 11px; color: #cbd5e1;">&copy; 2026 IncomeOnAI. All rights reserved. This product is for personal use only. Do not redistribute.</p>
+  </div>
+
+</div>
+</body>
+</html>

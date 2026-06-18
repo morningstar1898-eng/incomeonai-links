@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5 Make.com Automations That Save 10 Hours/Week &mdash; IncomeOnAI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.7; background: #fff; }
+    .page { max-width: 720px; margin: 0 auto; padding: 48px 40px; }
+
+    /* Cover */
+    .cover { text-align: center; padding: 80px 32px; background: linear-gradient(135deg, #0a1a0a, #1a3e2a); color: #fff; border-radius: 16px; margin-bottom: 48px; }
+    .cover .badge { display: inline-block; background: rgba(34,197,94,0.25); color: #86efac; font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; }
+    .cover h1 { font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 12px; background: linear-gradient(135deg, #4ade80, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .cover .subtitle { font-size: 16px; color: #94a3b8; max-width: 500px; margin: 0 auto 24px; }
+    .cover .author { font-size: 13px; color: #64748b; }
+
+    /* Sections */
+    h2 { font-size: 24px; font-weight: 800; color: #1a1a2e; margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 3px solid #16a34a; display: inline-block; }
+    h3 { font-size: 18px; font-weight: 700; color: #14532d; margin: 28px 0 12px; }
+    h4 { font-size: 15px; font-weight: 700; color: #15803d; margin: 20px 0 8px; }
+    p { margin-bottom: 14px; font-size: 15px; }
+
+    /* Boxes */
+    .framework-box { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 24px; margin: 20px 0; }
+    .framework-box.green { background: #f0fdf4; border-color: #4ade80; }
+    .formula { background: #052e16; color: #dcfce7; padding: 16px 20px; border-radius: 8px; font-family: monospace; font-size: 14px; margin: 12px 0; line-height: 1.6; }
+    .fill-in { background: #fffbeb; border: 2px dashed #f59e0b; padding: 14px 20px; border-radius: 8px; margin: 12px 0; font-style: italic; color: #92400e; }
+
+    /* Automation header */
+    .auto-header { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+    .auto-header h3 { margin: 0; }
+    .time-saved { display: inline-block; background: #dcfce7; color: #15803d; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 12px; white-space: nowrap; }
+
+    /* Steps */
+    .step-list { list-style: none; padding: 0; counter-reset: step-counter; }
+    .step-list li { padding: 12px 16px 12px 52px; margin: 8px 0; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 14px; position: relative; }
+    .step-list li::before { counter-increment: step-counter; content: counter(step-counter); position: absolute; left: 16px; top: 12px; width: 24px; height: 24px; background: #16a34a; color: #fff; font-size: 13px; font-weight: 700; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+    /* Pro Tip */
+    .pro-tip { background: #f0fdf4; border-left: 4px solid #16a34a; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 14px; font-weight: 500; }
+    .pro-tip strong { color: #14532d; }
+
+    /* Callout */
+    .callout { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 14px; font-weight: 500; }
+    .callout strong { color: #92400e; }
+
+    /* Summary table */
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    th { background: #052e16; color: #dcfce7; padding: 12px 16px; text-align: left; font-weight: 600; }
+    td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    tr:nth-child(even) td { background: #f8fafc; }
+
+    /* CTA box */
+    .cta-box { background: linear-gradient(135deg, #052e16, #14532d); color: #fff; padding: 32px; border-radius: 12px; text-align: center; margin: 32px 0; }
+    .cta-box h3 { color: #4ade80; margin-bottom: 12px; }
+    .cta-box p { color: #bbf7d0; font-size: 15px; margin-bottom: 16px; }
+    .cta-box a { display: inline-block; background: #22c55e; color: #fff; text-decoration: none; font-weight: 700; padding: 12px 28px; border-radius: 8px; font-size: 15px; }
+    .cta-box a:hover { background: #16a34a; }
+
+    /* Checklist */
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { padding: 12px 16px; margin: 8px 0; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; font-size: 14px; display: flex; align-items: flex-start; gap: 10px; }
+    .checklist li::before { content: "\2610"; font-size: 20px; color: #16a34a; flex-shrink: 0; }
+
+    /* Footer */
+    .footer { text-align: center; padding: 40px 0 20px; border-top: 2px solid #e2e8f0; margin-top: 48px; }
+    .footer p { font-size: 13px; color: #94a3b8; }
+    .footer a { color: #16a34a; text-decoration: none; font-weight: 600; }
+
+    /* Print styles */
+    @media print {
+      .page { padding: 24px; }
+      .cover { padding: 48px 24px; break-after: page; }
+      h2 { break-before: page; }
+      .framework-box, .formula, .pro-tip { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Cover -->
+  <div class="cover">
+    <div class="badge">IncomeOnAI &mdash; Free Guide</div>
+    <h1>5 Make.com Automations That Save 10 Hours/Week</h1>
+    <p class="subtitle">Set these up once, walk away, and let AI handle the boring stuff &mdash; so you can focus on creating, selling, and living your life.</p>
+    <p class="author">By IncomeOnAI</p>
+  </div>
+
+  <!-- Introduction -->
+  <h2>Why Automation Is Your #1 Unfair Advantage</h2>
+  <p>Here is the truth most creators ignore: the people winning online are not working harder than you. They are working <strong>less</strong>. Way less.</p>
+  <p>The difference? They set up systems that run without them. While you spend 2 hours a day copying links, writing emails, and checking analytics &mdash; they built a robot to do all of that. And it cost them $0.</p>
+  <p>That robot is <strong>Make.com</strong> (formerly Integromat). It is a free tool that connects your apps together. You tell it: "When THIS happens, do THAT." Then it runs on autopilot. Forever.</p>
+  <p>This guide gives you 5 complete automations. Not vague ideas. Not "go figure it out." You get the exact steps, the exact modules, and the exact setup. Each one takes 15-30 minutes to build. Together they save you <strong>10+ hours every single week</strong>.</p>
+  <p>That is 40 hours a month you get back. Use them to make more content. Launch a product. Or just rest. Your call.</p>
+
+  <div class="callout">
+    <strong>What you need before you start:</strong> A free Make.com account (the free plan gives you 1,000 operations per month &mdash; enough to run all 5 automations). A free OpenAI API key for the AI-powered ones ($1-2/month at most). And accounts on the platforms you use (YouTube, TikTok, Instagram, etc.).
+  </div>
+
+  <!-- Quick Overview Table -->
+  <h2>Quick Overview</h2>
+  <table>
+    <thead>
+      <tr><th>#</th><th>Automation</th><th>Time Saved/Week</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td>The Content Machine</td><td>3 hours</td></tr>
+      <tr><td>2</td><td>The Comment Closer</td><td>2 hours</td></tr>
+      <tr><td>3</td><td>The Newsletter Ghostwriter</td><td>2.5 hours</td></tr>
+      <tr><td>4</td><td>The Trend Scout</td><td>1.5 hours</td></tr>
+      <tr><td>5</td><td>The Stats Courier</td><td>1 hour</td></tr>
+    </tbody>
+  </table>
+
+  <!-- Automation 1 -->
+  <h2>Automation #1</h2>
+  <div class="auto-header">
+    <h3>The Content Machine</h3>
+    <span class="time-saved">Saves 3 hours/week</span>
+  </div>
+  <p><strong>What it does:</strong> You publish one piece of content in one place, and Make.com automatically posts it to TikTok, Instagram, and Twitter/X. No copying. No pasting. No logging into 3 apps. One trigger, three posts, done.</p>
+
+  <h4>Step-by-Step Setup</h4>
+  <ol class="step-list">
+    <li><strong>Create a new scenario</strong> in Make.com. Click the big purple "+" button on your dashboard. Name it "Content Machine."</li>
+    <li><strong>Add the trigger module: Google Drive &gt; Watch Files.</strong> Point it to a specific folder (call it "Ready to Post"). Every time you drop a video file into this folder, the automation fires. Set the schedule to run every 15 minutes.</li>
+    <li><strong>Add a Router module.</strong> Click the "+" after Google Drive and search for "Router." This splits your automation into 3 paths &mdash; one for each platform.</li>
+    <li><strong>Path 1 &mdash; Add the TikTok &gt; Upload a Video module.</strong> Connect your TikTok account. Map the file from Google Drive to the video field. Add a text file in your Google Drive folder with the caption &mdash; use Google Drive &gt; Download a File to pull the caption text and map it to the description field.</li>
+    <li><strong>Path 2 &mdash; Add the Instagram &gt; Create a Reel module.</strong> Connect your Instagram Business account. Map the same video file. Map the same caption text. Add up to 30 hashtags in the caption field.</li>
+    <li><strong>Path 3 &mdash; Add the Twitter &gt; Create a Tweet module.</strong> Connect your Twitter/X account. Map the video file to the media field. Shorten the caption to 280 characters using the built-in text function: <code>{{substring(caption; 0; 270)}}...</code></li>
+    <li><strong>Turn on scheduling.</strong> Click the clock icon at the bottom left. Set it to "Every 15 minutes." This means within 15 minutes of dropping a file in Google Drive, it goes everywhere.</li>
+    <li><strong>Test it.</strong> Drop a short test video and a caption.txt file into your "Ready to Post" folder. Click "Run once" in Make.com. Check all 3 platforms. If it works, turn on the scenario and never think about it again.</li>
+  </ol>
+
+  <div class="pro-tip">
+    <strong>Pro Tip:</strong> Add a 4th path to the Router for LinkedIn. Use the <strong>LinkedIn &gt; Create a User Post</strong> module. LinkedIn posts with video get 5x more reach than text-only posts, and most creators completely ignore this platform. Same video, zero extra work, whole new audience.
+  </div>
+
+  <!-- Automation 2 -->
+  <h2>Automation #2</h2>
+  <div class="auto-header">
+    <h3>The Comment Closer</h3>
+    <span class="time-saved">Saves 2 hours/week</span>
+  </div>
+  <p><strong>What it does:</strong> Every time someone comments on your YouTube videos, AI reads the comment, writes a helpful reply, and posts it &mdash; all within minutes. Your audience feels heard. Your engagement goes up. You do nothing.</p>
+
+  <h4>Step-by-Step Setup</h4>
+  <ol class="step-list">
+    <li><strong>Create a new scenario</strong> called "Comment Closer."</li>
+    <li><strong>Add the trigger: YouTube &gt; Watch Comments.</strong> Connect your YouTube account. Select "All Videos" or pick a specific channel. Set it to check every 15 minutes.</li>
+    <li><strong>Add a Filter module.</strong> Click the wrench icon between YouTube and the next module. Set a condition: comment text does NOT contain "spam" or link URLs. This keeps the bot from replying to junk.</li>
+    <li><strong>Add the OpenAI (ChatGPT) &gt; Create a Completion module.</strong> Connect your OpenAI API key. Set the model to <code>gpt-4o-mini</code> (cheap and fast). Use this prompt in the System Message:
+      <div class="formula">You are a friendly YouTube creator assistant. Reply to this viewer comment in 1-2 short sentences. Be warm, helpful, and casual. Never be salesy. If they ask a question, answer it. If they give a compliment, thank them. Keep it under 50 words.</div>
+      Map the YouTube comment text to the User Message field.</li>
+    <li><strong>Add the YouTube &gt; Reply to a Comment module.</strong> Map the original comment ID from Step 2. Map the AI-generated reply text from Step 4.</li>
+    <li><strong>Add an Error Handler.</strong> Click the small circle at the bottom of the last module. Add a "Resume" error handler. This way, if one comment fails (like a deleted comment), the rest still get replies.</li>
+    <li><strong>Turn on scheduling</strong> at every 15 minutes. Run a test with "Run once." Check your YouTube comments for the reply.</li>
+  </ol>
+
+  <div class="pro-tip">
+    <strong>Pro Tip:</strong> Add a <strong>Google Sheets &gt; Add a Row</strong> module at the end. Log every comment and reply to a spreadsheet. After 30 days, you will have a goldmine of audience questions &mdash; use those as video topic ideas. The comments literally tell you what to make next.
+  </div>
+
+  <!-- Automation 3 -->
+  <h2>Automation #3</h2>
+  <div class="auto-header">
+    <h3>The Newsletter Ghostwriter</h3>
+    <span class="time-saved">Saves 2.5 hours/week</span>
+  </div>
+  <p><strong>What it does:</strong> Every week, AI writes a full email newsletter based on your latest content and trending topics. It formats it, drops it into your email platform, and either sends it or saves it as a draft for you to review. A complete newsletter in zero minutes of writing.</p>
+
+  <h4>Step-by-Step Setup</h4>
+  <ol class="step-list">
+    <li><strong>Create a new scenario</strong> called "Newsletter Ghostwriter." Set the schedule to once per week (e.g., every Monday at 8 AM).</li>
+    <li><strong>Add the trigger: RSS &gt; Get RSS Feed Items.</strong> Paste the RSS feed URL of your own blog, YouTube channel, or content source. Set the limit to 5 items. This pulls your latest content titles and links.</li>
+    <li><strong>Add an Array Aggregator module.</strong> This collects all 5 RSS items into one bundle so AI can see them all at once. Map the title and link fields from the RSS module.</li>
+    <li><strong>Add the OpenAI (ChatGPT) &gt; Create a Completion module.</strong> Model: <code>gpt-4o-mini</code>. Use this system prompt:
+      <div class="formula">You are a newsletter writer for IncomeOnAI, a brand that helps creators build income with AI tools. Write a weekly email newsletter. Tone: casual, helpful, like texting a smart friend. Structure: 1) A short intro (2-3 sentences about a relevant theme), 2) "This Week's Top Picks" section with 3 content links and one-line descriptions, 3) One quick actionable tip, 4) A sign-off with "See you next week." Keep it under 300 words. Use line breaks, not HTML.</div>
+      Map the aggregated content titles and links to the User Message.</li>
+    <li><strong>Add the Mailchimp &gt; Create a Campaign module</strong> (or use <strong>Brevo (Sendinblue) &gt; Create an Email Campaign</strong> or <strong>ConvertKit &gt; Create a Broadcast</strong> depending on your email tool). Map the AI-generated text to the email body. Set the subject line using another short AI prompt or use a template like: "This week in AI: [first content title]".</li>
+    <li><strong>Set the campaign status to "Draft"</strong> (not "Send"). This gives you a chance to review the email before it goes out. Once you trust the system after 3-4 weeks, you can switch it to auto-send.</li>
+    <li><strong>Add a Slack &gt; Send a Message module</strong> (optional). Send yourself a notification: "Your weekly newsletter draft is ready. Go review it." This way you never forget.</li>
+    <li><strong>Test it.</strong> Click "Run once." Check your email platform for the draft. Edit anything that sounds off, then hit send.</li>
+  </ol>
+
+  <div class="pro-tip">
+    <strong>Pro Tip:</strong> Swap out the RSS module for <strong>Google Sheets &gt; Search Rows</strong> if you keep a content calendar spreadsheet. Point it to your "Published" column. This way the newsletter always matches exactly what you posted &mdash; not just what showed up in your feed.
+  </div>
+
+  <!-- Automation 4 -->
+  <h2>Automation #4</h2>
+  <div class="auto-header">
+    <h3>The Trend Scout</h3>
+    <span class="time-saved">Saves 1.5 hours/week</span>
+  </div>
+  <p><strong>What it does:</strong> Every morning, this automation scans trending topics in your niche, uses AI to turn them into content ideas, and delivers a ready-to-use list to your inbox or Slack. You wake up knowing exactly what to create today.</p>
+
+  <h4>Step-by-Step Setup</h4>
+  <ol class="step-list">
+    <li><strong>Create a new scenario</strong> called "Trend Scout." Set it to run daily at 7:00 AM.</li>
+    <li><strong>Add the trigger: RSS &gt; Get RSS Feed Items.</strong> Add 2-3 RSS feeds from top sources in your niche. For AI/tech content, use feeds from The Verge, TechCrunch, or Hacker News. Set limit to 10 items per feed. You can add multiple RSS modules and connect them all to the next step.</li>
+    <li><strong>Add a second data source: Google Trends &gt; Get Trending Searches</strong> (via the HTTP &gt; Make a Request module). Use this URL: <code>https://trends.google.com/trends/trendingsearches/daily/rss?geo=US</code>. Parse the XML response with the built-in XML parser to extract the top 5 trending topics.</li>
+    <li><strong>Add an Array Aggregator module.</strong> Merge all RSS items and trending topics into one bundle.</li>
+    <li><strong>Add the OpenAI (ChatGPT) &gt; Create a Completion module.</strong> Model: <code>gpt-4o-mini</code>. Prompt:
+      <div class="formula">You are a content strategist for a faceless AI content brand. Here are today's trending topics and news headlines. Pick the 5 most relevant to the AI tools / make money online / creator economy niche. For each one, give me: 1) The topic in 5 words or less, 2) A TikTok/Reel hook (one sentence, pattern interrupt), 3) A suggested angle that ties it to making money with AI. Format as a numbered list. Be specific and actionable.</div>
+      Map the aggregated data to the User Message.</li>
+    <li><strong>Add a Gmail &gt; Send an Email module</strong> (or <strong>Slack &gt; Send a Message</strong>). Send the AI-generated content ideas to yourself. Subject line: "Your Content Ideas for [today's date]". Map the AI output to the email body.</li>
+    <li><strong>Add a Google Sheets &gt; Add a Row module</strong> (optional). Log every daily idea list to a spreadsheet. After a month, you will have 150+ content ideas you can pull from anytime.</li>
+  </ol>
+
+  <div class="pro-tip">
+    <strong>Pro Tip:</strong> Add a second <strong>HTTP &gt; Make a Request</strong> module that pulls data from the Reddit JSON API. Use the URL <code>https://www.reddit.com/r/artificial/.json?limit=10</code> (swap in any subreddit). Reddit surfaces trends 24-48 hours before they hit mainstream news. You will always be first.
+  </div>
+
+  <!-- Automation 5 -->
+  <h2>Automation #5</h2>
+  <div class="auto-header">
+    <h3>The Stats Courier</h3>
+    <span class="time-saved">Saves 1 hour/week</span>
+  </div>
+  <p><strong>What it does:</strong> Once a week, this automation pulls your key numbers from YouTube, TikTok, and your email list, organizes them into a clean summary, and emails it to you. No logging into 4 dashboards. No spreadsheet updates. Just one email with everything you need to know.</p>
+
+  <h4>Step-by-Step Setup</h4>
+  <ol class="step-list">
+    <li><strong>Create a new scenario</strong> called "Stats Courier." Set it to run every Sunday at 9 AM.</li>
+    <li><strong>Add the YouTube Analytics &gt; Get Channel Stats module.</strong> Connect your YouTube account. Pull: total views (last 7 days), new subscribers, top-performing video, and watch time. These fields are built into the module.</li>
+    <li><strong>Add the TikTok &gt; Get User Info module.</strong> Pull: follower count, total likes, and video count. Note: for detailed TikTok analytics, you may need to use the <strong>HTTP &gt; Make a Request</strong> module with the TikTok API endpoint and your access token.</li>
+    <li><strong>Add the Mailchimp &gt; Get List Info module</strong> (or your email platform's equivalent). Pull: total subscribers, new subscribers this week, open rate, and click rate from your last campaign.</li>
+    <li><strong>Add the OpenAI (ChatGPT) &gt; Create a Completion module.</strong> Model: <code>gpt-4o-mini</code>. Prompt:
+      <div class="formula">You are a data analyst for a content creator. Here are this week's stats. Write a short weekly report (under 200 words). Include: 1) A one-line "headline" summary (e.g., "Great week: YouTube up 23%, email list hit 500"), 2) Key wins, 3) One area to improve, 4) One specific action item for next week. Keep it casual and encouraging.</div>
+      Map all the stats data to the User Message.</li>
+    <li><strong>Add the Gmail &gt; Send an Email module.</strong> Send the report to yourself. Subject: "Weekly Stats Report &mdash; [date range]". Map the AI summary to the body.</li>
+    <li><strong>Add a Google Sheets &gt; Add a Row module.</strong> Log the raw numbers (views, subscribers, email opens) to a spreadsheet. One row per week. After a few months, you will see trends that tell you exactly what is working and what to double down on.</li>
+    <li><strong>Test with "Run once."</strong> Check your inbox for the report. Tweak the AI prompt if the tone is not right. Then let it run every Sunday forever.</li>
+  </ol>
+
+  <div class="pro-tip">
+    <strong>Pro Tip:</strong> Add a <strong>Google Sheets &gt; Search Rows</strong> module that pulls LAST week's stats. Feed both weeks into the AI prompt. Now your report includes week-over-week comparisons automatically. "Views up 34% from last week" is way more useful than just "4,200 views."
+  </div>
+
+  <!-- Total Time Saved -->
+  <h2>Your Time Savings Breakdown</h2>
+  <p>Here is what your week looks like after setting up all 5 automations:</p>
+
+  <table>
+    <thead>
+      <tr><th>Automation</th><th>Before (manual)</th><th>After (automated)</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cross-posting content</td><td>3 hrs/week</td><td>0 minutes</td></tr>
+      <tr><td>Replying to comments</td><td>2 hrs/week</td><td>0 minutes</td></tr>
+      <tr><td>Writing newsletter</td><td>2.5 hrs/week</td><td>10 min review</td></tr>
+      <tr><td>Researching trends</td><td>1.5 hrs/week</td><td>0 minutes</td></tr>
+      <tr><td>Checking analytics</td><td>1 hr/week</td><td>0 minutes</td></tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <strong>Total saved: 10+ hours every week.</strong> That is 40 hours a month. 500 hours a year. All from one afternoon of setup. These automations run on the free Make.com plan (1,000 operations/month). If you outgrow it, the paid plan is $9/month &mdash; still cheaper than one hour of a VA's time.
+  </div>
+
+  <!-- What's Next -->
+  <h2>What's Next? Go From Automated to Profitable</h2>
+  <p>You just saved 10 hours a week. Now the question is: <strong>what do you DO with those 10 hours?</strong></p>
+  <p>Most people waste them. They scroll. They "plan." They tweak automations that already work.</p>
+  <p>The smart move? Use those hours to build the business around your content. That means:</p>
+
+  <ul class="checklist">
+    <li><strong>A product funnel</strong> &mdash; so your free content leads to paid offers</li>
+    <li><strong>An email list</strong> &mdash; so you own your audience (not the algorithm)</li>
+    <li><strong>A premium offer</strong> &mdash; so you earn $500-5,000 per sale instead of $0.003 per view</li>
+    <li><strong>A content system</strong> &mdash; so you post daily in 60 minutes flat</li>
+  </ul>
+
+  <p>That is exactly what <strong>The AI Business Blueprint</strong> teaches. It is the complete system for going from "I post content" to "I run a $5K/month AI-powered business."</p>
+
+  <div class="cta-box">
+    <h3>The AI Business Blueprint</h3>
+    <p>The complete course to build a $5K/month faceless content business using AI. Content systems, product funnels, email marketing, automation &mdash; all in one place.</p>
+    <a href="https://morningstar1898-eng.github.io/incomeonai-links/">Get the Blueprint &mdash; $97</a>
+  </div>
+
+  <!-- Final CTAs -->
+  <h2>Keep Going</h2>
+
+  <div class="framework-box green">
+    <h4>Join the Free Newsletter</h4>
+    <p>Every week: one new automation, one AI tool breakdown, and one strategy to grow your income. No fluff. No spam. Just the stuff that works.</p>
+    <p><strong>Sign up at:</strong> <a href="https://morningstar1898-eng.github.io/incomeonai-links/" style="color: #16a34a; font-weight: 700;">IncomeOnAI Links</a></p>
+  </div>
+
+  <div class="framework-box green">
+    <h4>Want the Full AI Business System?</h4>
+    <p>The AI Business Blueprint ($97) gives you the complete playbook: content creation, product launches, email funnels, and advanced automations that go way beyond this guide. If you are serious about making money with AI content, this is where you start.</p>
+    <p><strong>Learn more:</strong> <a href="https://morningstar1898-eng.github.io/incomeonai-links/" style="color: #16a34a; font-weight: 700;">IncomeOnAI Links</a></p>
+  </div>
+
+  <div class="framework-box">
+    <h4>Free Resources</h4>
+    <p>Check out all of our free guides, tools, and templates:</p>
+    <p><a href="https://morningstar1898-eng.github.io/incomeonai-links/" style="color: #16a34a; font-weight: 700;">morningstar1898-eng.github.io/incomeonai-links</a></p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p><strong>5 Make.com Automations That Save 10 Hours/Week</strong></p>
+    <p>Built by <a href="https://morningstar1898-eng.github.io/incomeonai-links/">IncomeOnAI</a></p>
+    <p>More tools, automations, and strategies at your link-in-bio page.</p>
+    <p style="margin-top: 16px; font-size: 11px; color: #cbd5e1;">&copy; 2026 IncomeOnAI. All rights reserved. This product is for personal use only. Do not redistribute.</p>
+  </div>
+
+</div>
+</body>
+</html>

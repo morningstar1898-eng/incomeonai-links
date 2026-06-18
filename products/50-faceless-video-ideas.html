@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>50 Faceless Video Ideas Sorted by Niche — IncomeOnAI</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.7; background: #fff; }
+    .page { max-width: 720px; margin: 0 auto; padding: 48px 40px; }
+
+    /* Cover */
+    .cover { text-align: center; padding: 80px 32px; background: linear-gradient(135deg, #0a0a1a, #1a2a3e); color: #fff; border-radius: 16px; margin-bottom: 48px; }
+    .cover .badge { display: inline-block; background: rgba(99,102,241,0.3); color: #a5b4fc; font-size: 12px; font-weight: 700; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; }
+    .cover h1 { font-size: 36px; font-weight: 800; line-height: 1.2; margin-bottom: 12px; background: linear-gradient(135deg, #c084fc, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .cover .subtitle { font-size: 16px; color: #94a3b8; max-width: 500px; margin: 0 auto 24px; }
+    .cover .author { font-size: 13px; color: #64748b; }
+
+    /* Sections */
+    h2 { font-size: 24px; font-weight: 800; color: #1a1a2e; margin: 48px 0 16px; padding-bottom: 8px; border-bottom: 3px solid #6366f1; display: inline-block; }
+    h3 { font-size: 18px; font-weight: 700; color: #312e81; margin: 28px 0 12px; }
+    h4 { font-size: 15px; font-weight: 700; color: #4338ca; margin: 20px 0 8px; }
+    p { margin-bottom: 14px; font-size: 15px; }
+
+    /* Boxes */
+    .framework-box { background: #f8fafc; border: 2px solid #e2e8f0; border-radius: 12px; padding: 24px; margin: 20px 0; }
+    .framework-box.purple { background: #faf5ff; border-color: #c084fc; }
+    .formula { background: #1e1b4b; color: #e0e7ff; padding: 16px 20px; border-radius: 8px; font-family: monospace; font-size: 14px; margin: 12px 0; line-height: 1.6; }
+    .fill-in { background: #fffbeb; border: 2px dashed #f59e0b; padding: 14px 20px; border-radius: 8px; margin: 12px 0; font-style: italic; color: #92400e; }
+
+    /* Hooks list */
+    .hook-category { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #6366f1; margin: 24px 0 8px; }
+    .hook-list { list-style: none; padding: 0; }
+    .hook-list li { padding: 10px 16px; margin: 6px 0; background: #f8fafc; border-left: 4px solid #6366f1; border-radius: 0 8px 8px 0; font-size: 14px; }
+    .hook-list li strong { color: #4338ca; }
+
+    /* Checklist */
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { padding: 12px 16px; margin: 8px 0; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; font-size: 14px; display: flex; align-items: flex-start; gap: 10px; }
+    .checklist li::before { content: "\2610"; font-size: 20px; color: #16a34a; flex-shrink: 0; }
+
+    /* Templates */
+    .template-box { background: #0f172a; color: #e2e8f0; padding: 20px 24px; border-radius: 12px; margin: 16px 0; font-family: monospace; font-size: 13px; line-height: 1.8; white-space: pre-line; }
+    .template-box .label { color: #818cf8; font-weight: 700; }
+
+    /* Table */
+    table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 14px; }
+    th { background: #1e1b4b; color: #e0e7ff; padding: 12px 16px; text-align: left; font-weight: 600; }
+    td { padding: 10px 16px; border-bottom: 1px solid #e2e8f0; }
+    tr:nth-child(even) td { background: #f8fafc; }
+
+    /* Niche header */
+    .niche-header { background: linear-gradient(135deg, #1e1b4b, #312e81); color: #e0e7ff; padding: 16px 24px; border-radius: 12px 12px 0 0; margin-top: 32px; margin-bottom: 0; }
+    .niche-header h3 { color: #c4b5fd; margin: 0 0 4px; font-size: 20px; }
+    .niche-header p { color: #a5b4fc; font-size: 13px; margin: 0; }
+    .niche-table { margin-top: 0; border-radius: 0 0 12px 12px; overflow: hidden; border: 2px solid #e2e8f0; border-top: 0; }
+    .niche-table th { font-size: 13px; }
+    .niche-table td { font-size: 13px; }
+
+    /* Difficulty badges */
+    .diff-easy { background: #dcfce7; color: #166534; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+    .diff-medium { background: #fef9c3; color: #854d0e; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+    .diff-hard { background: #fce7f3; color: #9d174d; padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+
+    /* Callout */
+    .callout { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 16px 20px; border-radius: 0 8px 8px 0; margin: 20px 0; font-size: 14px; font-weight: 500; }
+    .callout strong { color: #92400e; }
+
+    /* CTA box */
+    .cta-box { background: linear-gradient(135deg, #1e1b4b, #312e81); color: #e0e7ff; padding: 32px; border-radius: 16px; margin: 32px 0; text-align: center; }
+    .cta-box h3 { color: #c4b5fd; font-size: 22px; margin-bottom: 12px; }
+    .cta-box p { color: #a5b4fc; font-size: 15px; margin-bottom: 16px; }
+    .cta-box a { display: inline-block; background: #6366f1; color: #fff; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; }
+    .cta-box a:hover { background: #4f46e5; }
+
+    /* Footer */
+    .footer { text-align: center; padding: 40px 0 20px; border-top: 2px solid #e2e8f0; margin-top: 48px; }
+    .footer p { font-size: 13px; color: #94a3b8; }
+    .footer a { color: #6366f1; text-decoration: none; font-weight: 600; }
+
+    /* Print styles */
+    @media print {
+      .page { padding: 24px; }
+      .cover { padding: 48px 24px; break-after: page; }
+      h2 { break-before: page; }
+      .niche-header, .niche-table { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Cover -->
+  <div class="cover">
+    <div class="badge">IncomeOnAI</div>
+    <h1>50 Faceless Video Ideas Sorted by Niche</h1>
+    <p class="subtitle">Never run out of video ideas again. 10 profitable niches. 5 ready-to-film ideas each. Just pick one and press record.</p>
+    <p class="author">By IncomeOnAI &bull; incomeonai.com</p>
+  </div>
+
+  <!-- Intro -->
+  <h2>Why This List Exists</h2>
+  <p>The #1 reason faceless creators quit? They run out of ideas after two weeks.</p>
+  <p>This guide fixes that. You get <strong>50 video ideas</strong> across <strong>10 proven niches</strong>. Each idea comes with a working title, a scroll-stopping hook, and a difficulty rating so you know exactly what you're getting into.</p>
+  <p>Pick a niche. Pick an idea. Film it today. It really is that simple.</p>
+
+  <!-- How to Pick Your Niche -->
+  <h2>How to Pick Your Niche</h2>
+  <p>Don't overthink this. Use these four questions to find your best fit in under 5 minutes:</p>
+
+  <div class="framework-box">
+    <h4>1. Can you talk about this for 100 videos?</h4>
+    <p>You don't need to be an expert. You just need to stay interested long enough to build momentum. If you'd get bored after 10 videos, move on.</p>
+  </div>
+
+  <div class="framework-box">
+    <h4>2. Are people already spending money in this niche?</h4>
+    <p>Search TikTok Shop, Amazon bestsellers, or Gumroad for your topic. If people are buying courses, tools, or templates, there's money on the table.</p>
+  </div>
+
+  <div class="framework-box">
+    <h4>3. Can you make it faceless?</h4>
+    <p>Some niches work better faceless than others. Screen recordings, AI voiceovers, stock footage, and text-on-screen all work great. If your niche needs you on camera to build trust (like fitness coaching), it's harder to go faceless.</p>
+  </div>
+
+  <div class="framework-box">
+    <h4>4. Is there a clear product to sell?</h4>
+    <p>The real money isn't in views. It's in what you sell to those viewers. Pick a niche where you can offer a digital product, affiliate link, or service. Every niche below has at least 3 ways to make money.</p>
+  </div>
+
+  <div class="callout">
+    <strong>Pro tip:</strong> Start with ONE niche. Post 30 videos. Then look at your analytics. Your audience will tell you what they want more of. Don't try to cover all 10 niches at once.
+  </div>
+
+  <!-- THE 50 IDEAS -->
+  <h2>The 50 Ideas</h2>
+  <p>Each idea includes a ready-to-use title, a one-sentence hook you can read word-for-word, and a difficulty level. <strong>Easy</strong> = record in under 15 minutes. <strong>Medium</strong> = needs some research or editing. <strong>Hard</strong> = longer production but higher payoff.</p>
+
+  <!-- NICHE 1: AI & Tech -->
+  <div class="niche-header">
+    <h3>1. AI &amp; Tech</h3>
+    <p>Huge demand, fast-growing audience, tons of new tools to cover every week</p>
+  </div>
+  <table class="niche-table">
+    <thead>
+      <tr><th>#</th><th>Title &amp; Hook</th><th>Difficulty</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><strong>5 Free AI Tools That Replace $500/Month in Software</strong><br>"You're paying for apps that AI can do for free. Here are 5 I switched to this month."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><strong>I Let AI Write My Emails for a Week &mdash; Here's What Happened</strong><br>"I handed my inbox to ChatGPT for 7 days. Some replies were genius. One almost got me fired."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><strong>The AI Tool That Turns Any Article Into a Video in 60 Seconds</strong><br>"Paste a blog post. Click one button. Get a fully edited video with voiceover. This is wild."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><strong>ChatGPT vs. Claude vs. Gemini: Which One Actually Wins?</strong><br>"I gave all three the same 10 tasks. The results weren't even close."</td>
+        <td><span class="diff-hard">Hard</span></td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><strong>How to Build a Full Website in 10 Minutes With AI (No Coding)</strong><br>"I used one AI tool, zero code, and 10 minutes. The site looks like a dev built it."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- NICHE 2: Personal Finance -->
+  <div class="niche-header">
+    <h3>2. Personal Finance</h3>
+    <p>Evergreen topic, high-value affiliate products, massive search demand</p>
+  </div>
+  <table class="niche-table">
+    <thead>
+      <tr><th>#</th><th>Title &amp; Hook</th><th>Difficulty</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>6</td>
+        <td><strong>The 50/30/20 Rule Is Wrong &mdash; Do This Instead</strong><br>"Every finance guru pushes the same budget rule. Here's why it fails and what actually works."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><strong>3 Bank Accounts That Pay You $300+ Just to Sign Up</strong><br>"These banks are giving away free money right now. No catch. I signed up for all three."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><strong>How I Save $800/Month Without Thinking About It</strong><br>"I automated my savings so I never see the money leave. Here's the exact setup."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><strong>5 Subscriptions You're Paying For and Forgot About</strong><br>"The average person wastes $240/year on subscriptions they never use. Here's how to find yours."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><strong>What Happens When You Invest $100/Month for 10 Years</strong><br>"I ran the numbers on a $100/month investment starting today. The result at year 10 is insane."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- NICHE 3: Health & Wellness -->
+  <div class="niche-header">
+    <h3>3. Health &amp; Wellness</h3>
+    <p>Relatable content, huge audience, great for affiliate and digital products</p>
+  </div>
+  <table class="niche-table">
+    <thead>
+      <tr><th>#</th><th>Title &amp; Hook</th><th>Difficulty</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>11</td>
+        <td><strong>5 Morning Habits That Changed My Energy Levels Forever</strong><br>"I was exhausted every single morning until I swapped these 5 things. Now I wake up before my alarm."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td><strong>What Happens to Your Body When You Walk 10K Steps a Day for 30 Days</strong><br>"I walked 10,000 steps every day for a month. The changes I saw had nothing to do with weight."</td>
+        <td><span class="diff-hard">Hard</span></td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td><strong>3 Foods a Gut Doctor Would Never Eat (And What to Eat Instead)</strong><br>"These three foods destroy your gut health. Most people eat them every single day."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td><strong>The 2-Minute Stretch That Fixes Desk Posture</strong><br>"If you sit at a desk all day, this one stretch can undo hours of damage. Takes 2 minutes."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td><strong>Why You're Always Tired (It's Not Sleep)</strong><br>"You're getting 8 hours and still waking up drained. The problem isn't sleep. It's this."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- NICHE 4: Business & Entrepreneurship -->
+  <div class="niche-header">
+    <h3>4. Business &amp; Entrepreneurship</h3>
+    <p>High-intent audience ready to buy tools, courses, and templates</p>
+  </div>
+  <table class="niche-table">
+    <thead>
+      <tr><th>#</th><th>Title &amp; Hook</th><th>Difficulty</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>16</td>
+        <td><strong>How to Start a Business With $0 and a Laptop</strong><br>"You don't need funding. You don't need a team. Here's exactly how to launch with nothing but WiFi."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td><strong>5 Digital Products You Can Create This Weekend and Sell Forever</strong><br>"These 5 products take one weekend to build. Then they sell on autopilot while you sleep."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td><strong>The One-Page Business Plan That Actually Works</strong><br>"Forget 30-page business plans. This one-page version is what real founders use to make money fast."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td><strong>I Sold $1,000 in My First Week on Gumroad &mdash; Here's How</strong><br>"My first digital product made $1K in 7 days. The product took me 3 hours to build."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>20</td>
+        <td><strong>3 Businesses You Can Run Entirely From Your Phone</strong><br>"No laptop needed. These 3 business models run 100% from your phone. I tested all three."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- NICHE 5: Digital Marketing -->
+  <div class="niche-header">
+    <h3>5. Digital Marketing</h3>
+    <p>Every business needs marketing &mdash; endless demand for tips, hacks, and strategies</p>
+  </div>
+  <table class="niche-table">
+    <thead>
+      <tr><th>#</th><th>Title &amp; Hook</th><th>Difficulty</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>21</td>
+        <td><strong>How to Get 1,000 Followers in 30 Days (Step by Step)</strong><br>"I grew a brand-new account to 1,000 followers in one month. Here's the exact strategy, day by day."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>22</td>
+        <td><strong>The Instagram Reels Algorithm Explained in 60 Seconds</strong><br>"Instagram just changed how Reels work. If you don't know these 3 rules, your videos won't get seen."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>23</td>
+        <td><strong>5 Email Subject Lines That Get 50%+ Open Rates</strong><br>"Most emails get ignored. But these 5 subject lines get opened by half the people who see them."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>24</td>
+        <td><strong>How to Write a Landing Page That Converts (Free Template)</strong><br>"This landing page template has made me over $10K. I'm giving it away free. Here's how to use it."</td>
+        <td><span class="diff-hard">Hard</span></td>
+      </tr>
+      <tr>
+        <td>25</td>
+        <td><strong>The $0 Ad Strategy That Beats Paid Ads Every Time</strong><br>"Stop spending money on ads that don't work. This free strategy outperforms most paid campaigns."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- NICHE 6: Self-Improvement -->
+  <div class="niche-header">
+    <h3>6. Self-Improvement</h3>
+    <p>Massive audience across every age group, high engagement, easy to produce faceless</p>
+  </div>
+  <table class="niche-table">
+    <thead>
+      <tr><th>#</th><th>Title &amp; Hook</th><th>Difficulty</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>26</td>
+        <td><strong>5 Habits of People Who Are Always Productive</strong><br>"Productive people don't have more time. They have these 5 habits that most people skip."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>27</td>
+        <td><strong>How to Stop Procrastinating in 3 Steps (Backed by Science)</strong><br>"Your brain is wired to procrastinate. But this 3-step trick rewires it in under a week."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>28</td>
+        <td><strong>The 5-Minute Journal Routine That Changed My Mindset</strong><br>"I spent 5 minutes writing every morning for 30 days. My stress dropped and my focus doubled."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>29</td>
+        <td><strong>7 Books That Will Change How You Think About Money</strong><br>"These 7 books rewired my relationship with money. Number 4 made me quit my 9-to-5."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>30</td>
+        <td><strong>How to Learn Any New Skill in 30 Days (The 80/20 Method)</strong><br>"You don't need years to learn something new. This method gets you 80% of the results in 30 days."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- NICHE 7: Cooking & Food -->
+  <div class="niche-header">
+    <h3>7. Cooking &amp; Food</h3>
+    <p>Top-down recipe videos crush on every platform &mdash; no face needed</p>
+  </div>
+  <table class="niche-table">
+    <thead>
+      <tr><th>#</th><th>Title &amp; Hook</th><th>Difficulty</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>31</td>
+        <td><strong>5 Meals Under $5 That Taste Like They Cost $30</strong><br>"Eating cheap doesn't mean eating boring. These 5 meals cost under $5 and they look restaurant-quality."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>32</td>
+        <td><strong>3-Ingredient Recipes That Go Viral Every Time</strong><br>"The simplest recipes get the most views. Here are 5 that only need 3 ingredients each."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>33</td>
+        <td><strong>Meal Prep Sunday: 5 Days of Lunches in 1 Hour</strong><br>"I prepped 5 days of lunch in 60 minutes. Total cost: $22. Here's exactly what I made."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>34</td>
+        <td><strong>The TikTok Pasta Hack That Actually Works (I Tested 5)</strong><br>"TikTok is full of pasta hacks. I tested the top 5 so you don't waste your groceries."</td>
+        <td><span class="diff-hard">Hard</span></td>
+      </tr>
+      <tr>
+        <td>35</td>
+        <td><strong>10 Snacks You Can Make in Under 2 Minutes</strong><br>"Hungry but lazy? These 10 snacks take less than 2 minutes. Number 7 is unreal."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- NICHE 8: Travel -->
+  <div class="niche-header">
+    <h3>8. Travel</h3>
+    <p>Stock footage + AI voiceover = beautiful faceless travel content without leaving home</p>
+  </div>
+  <table class="niche-table">
+    <thead>
+      <tr><th>#</th><th>Title &amp; Hook</th><th>Difficulty</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>36</td>
+        <td><strong>5 Countries Where $1,000/Month Gets You a Luxury Life</strong><br>"In these 5 countries, $1,000 a month covers rent, food, and fun. Number 3 has a beach."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>37</td>
+        <td><strong>How to Fly Business Class for the Price of Economy</strong><br>"I flew business class for $200 using one trick. The airlines don't advertise this."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>38</td>
+        <td><strong>The Hidden Google Flights Trick That Saves Hundreds</strong><br>"Google Flights has a secret feature that finds cheaper routes. Nobody uses it."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>39</td>
+        <td><strong>10 Places That Look Fake But Are 100% Real</strong><br>"These places look photoshopped. They're not. You can visit all 10 of them."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>40</td>
+        <td><strong>How I Travel Full-Time While Working Remotely</strong><br>"I've worked from 12 countries in 2 years. Here's the exact setup that makes it possible."</td>
+        <td><span class="diff-hard">Hard</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- NICHE 9: Education & Learning -->
+  <div class="niche-header">
+    <h3>9. Education &amp; Learning</h3>
+    <p>Screen recordings and explainer videos are perfect for faceless &mdash; high save and share rates</p>
+  </div>
+  <table class="niche-table">
+    <thead>
+      <tr><th>#</th><th>Title &amp; Hook</th><th>Difficulty</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>41</td>
+        <td><strong>5 Free Websites That Are Better Than a College Degree</strong><br>"These 5 websites teach you more than 4 years of college. All free. Zero student debt."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td><strong>How to Learn a Language in 90 Days (Free Method)</strong><br>"I learned conversational Spanish in 3 months using free apps. Here's the day-by-day plan."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td><strong>The Note-Taking Method Top Students Use (It's Not What You Think)</strong><br>"Highlighting and re-reading don't work. The students with the best grades all use this method instead."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td><strong>5 High-Paying Skills You Can Learn in a Weekend</strong><br>"These 5 skills take 2 days to learn. Each one can make you $1K+/month as a freelancer."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td><strong>How to Memorize Anything in Half the Time (Science-Backed)</strong><br>"Your brain can remember twice as much if you study this way. It's called spaced repetition."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- NICHE 10: Gaming & Entertainment -->
+  <div class="niche-header">
+    <h3>10. Gaming &amp; Entertainment</h3>
+    <p>Screen recordings, tier lists, and commentary &mdash; all faceless, all high-engagement</p>
+  </div>
+  <table class="niche-table">
+    <thead>
+      <tr><th>#</th><th>Title &amp; Hook</th><th>Difficulty</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>46</td>
+        <td><strong>5 Free Games That Are Better Than Most $60 Games</strong><br>"These free games have thousands of hours of content. Number 3 has better reviews than most AAA titles."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td><strong>I Let AI Play This Game for 24 Hours &mdash; The Results Are Insane</strong><br>"I gave an AI bot full control of my game for 24 hours straight. It did things I never expected."</td>
+        <td><span class="diff-hard">Hard</span></td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td><strong>The Psychology Behind Why You Can't Stop Playing This Game</strong><br>"Game designers use 3 tricks to keep you hooked. Once you see them, you can't unsee them."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td><strong>Ranking Every Viral Mobile Game From Worst to Best</strong><br>"I downloaded every viral mobile game from the past year. Most are trash. But 3 are actually amazing."</td>
+        <td><span class="diff-medium">Medium</span></td>
+      </tr>
+      <tr>
+        <td>50</td>
+        <td><strong>5 Hidden Easter Eggs in Games You Definitely Missed</strong><br>"These easter eggs were hidden in plain sight for years. Number 1 took players a decade to find."</td>
+        <td><span class="diff-easy">Easy</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- How to Turn Any Idea Into a Script -->
+  <h2>How to Turn Any Idea Into a Script in 5 Minutes</h2>
+  <p>You have 50 ideas now. But an idea without a script is just a thought. Here's how to go from idea to finished script in 5 minutes flat using AI tools.</p>
+
+  <div class="framework-box">
+    <h4>Step 1: Paste This Prompt Into ChatGPT or Claude (30 seconds)</h4>
+    <div class="template-box"><span class="label">PROMPT:</span>
+Write a 60-second faceless video script about [YOUR TOPIC].
+
+Structure:
+- Hook (first 3 seconds): Start with a surprising fact or bold claim
+- Problem (next 5 seconds): Why this matters to the viewer
+- 3 main points (30 seconds): Specific, actionable tips with examples
+- CTA (last 5 seconds): One clear action
+
+Rules: Write at a 6th-grade reading level. Use short sentences. No filler words. Make it sound like a real person talking, not a textbook.</div>
+  </div>
+
+  <div class="framework-box">
+    <h4>Step 2: Clean It Up (90 seconds)</h4>
+    <p>Read the script out loud. If you stumble on any sentence, shorten it. If any point feels vague, add a number or a specific tool name. Cut anything that sounds like filler.</p>
+    <p><strong>Rule of thumb:</strong> A 60-second video is about 150 words. If your script is over 160, cut something.</p>
+  </div>
+
+  <div class="framework-box">
+    <h4>Step 3: Generate the Voiceover (60 seconds)</h4>
+    <p>Use a free AI voice tool like ElevenLabs or the built-in voice feature in CapCut. Paste your script, pick a voice, and export.</p>
+    <p><strong>Best voices for faceless content:</strong> Calm, confident, slightly fast-paced. Avoid overly robotic voices.</p>
+  </div>
+
+  <div class="framework-box">
+    <h4>Step 4: Add Visuals (2 minutes)</h4>
+    <p>Use screen recordings, stock footage from Pexels, or AI-generated images. Match the visual to each point in your script. Add captions (CapCut does this automatically).</p>
+  </div>
+
+  <div class="framework-box">
+    <h4>Step 5: Export and Post (30 seconds)</h4>
+    <p>Export at 1080x1920 (vertical). Post to TikTok, YouTube Shorts, and Instagram Reels at the same time. Same video, three platforms, three chances to go viral.</p>
+  </div>
+
+  <div class="callout">
+    <strong>Speed hack:</strong> Batch your content. Pick 5 ideas from this list, write all 5 scripts in one sitting, film them all back-to-back, then schedule them across the week. One hour of work = one week of content.
+  </div>
+
+  <!-- CTA Section -->
+  <h2>What's Next?</h2>
+
+  <div class="cta-box">
+    <h3>Want the Exact AI Prompts That Write Your Scripts?</h3>
+    <p>The <strong>AI Prompt Pack</strong> has 100+ copy-paste prompts for scripts, hooks, captions, emails, and more. Stop staring at a blank screen. Let AI do the heavy lifting.</p>
+    <a href="https://morningstar1898-eng.github.io/incomeonai-links/">Get the AI Prompt Pack ($27)</a>
+  </div>
+
+  <div class="cta-box" style="background: linear-gradient(135deg, #064e3b, #065f46);">
+    <h3>Grab the Free Faceless Creator Starter Kit</h3>
+    <p>Get the free tool stack, posting schedule, and quick-start guide that 5,000+ faceless creators are already using.</p>
+    <a href="https://morningstar1898-eng.github.io/incomeonai-links/" style="background: #10b981;">Download Free Starter Kit</a>
+  </div>
+
+  <div class="framework-box purple" style="text-align: center;">
+    <h4>Join the IncomeOnAI Newsletter</h4>
+    <p>Get one new faceless video idea, one AI tool tip, and one money-making strategy every week. Free. No spam. Unsubscribe anytime.</p>
+    <p><a href="https://morningstar1898-eng.github.io/incomeonai-links/" style="color: #6366f1; font-weight: 700;">Subscribe at IncomeOnAI</a></p>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p><strong>50 Faceless Video Ideas Sorted by Niche</strong></p>
+    <p>Built by <a href="https://morningstar1898-eng.github.io/incomeonai-links/">IncomeOnAI</a></p>
+    <p>More tools, prompts, and strategies at your link-in-bio page.</p>
+    <p style="margin-top: 16px; font-size: 11px; color: #cbd5e1;">&copy; 2026 IncomeOnAI. All rights reserved. This product is for personal use only. Do not redistribute.</p>
+  </div>
+
+</div>
+</body>
+</html>
