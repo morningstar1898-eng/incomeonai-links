@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5 AI Prompts That Save Analysts 10+ Hours a Week — IncomeOnAI</title>
+<meta name="description" content="The exact AI prompts data analysts use for SQL, Excel, data cleaning, exec summaries, and dashboards. Free guide from IncomeOnAI.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',-apple-system,sans-serif;background:#0a0a0a;color:#e5e5e5;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:48px 20px 80px}
+  .eyebrow{color:#818cf8;font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase}
+  h1{font-size:34px;font-weight:800;margin:10px 0 14px;background:linear-gradient(135deg,#c084fc,#818cf8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .lede{color:#a1a1aa;font-size:17px;margin-bottom:36px}
+  .prompt{background:#161618;border:1px solid #27272a;border-radius:14px;padding:22px;margin-bottom:20px}
+  .prompt h2{font-size:19px;font-weight:700;color:#fafafa;margin-bottom:4px}
+  .saves{color:#10b981;font-weight:600;font-size:13px;margin-bottom:12px}
+  .code{background:#0a0a0a;border:1px solid #2a2a2e;border-radius:10px;padding:14px;font-family:ui-monospace,Menlo,monospace;font-size:13px;color:#d4d4d8;white-space:pre-wrap;margin-bottom:10px}
+  .tip{font-size:13px;color:#a1a1aa}.tip b{color:#c084fc}
+  .cta{background:linear-gradient(135deg,#1e1b4b,#312e81);border:1px solid #4338ca;border-radius:16px;padding:28px;text-align:center;margin-top:36px}
+  .cta h3{color:#e0e7ff;font-size:20px;margin-bottom:8px}
+  .cta p{color:#a5b4fc;font-size:14px;margin-bottom:16px}
+  .btn{display:inline-block;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:#fff;font-weight:700;padding:13px 26px;border-radius:12px;text-decoration:none}
+  .foot{text-align:center;color:#3f3f46;font-size:12px;margin-top:40px}
+  a{color:#a78bfa}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="eyebrow">IncomeOnAI · Free Guide for Analysts</div>
+  <h1>5 AI Prompts That Save Analysts 10+ Hours a Week</h1>
+  <p class="lede">Copy these, swap in your details, and stop doing by hand what AI does in seconds. The rule: <b>AI drafts, you verify.</b> You still own the judgment — you just skip the grunt work. AI won't replace analysts. Analysts who use AI will replace the ones who don't.</p>
+
+  <div class="prompt">
+    <h2>1. The SQL Writer</h2>
+    <div class="saves">Saves ~3–5 hrs/week</div>
+    <div class="code">Act as a senior data analyst. Write a [BigQuery/Postgres/T-SQL] query that [goal].
+Tables &amp; key columns: [paste schema].
+Explain the joins in one line each, and flag any assumptions you made.</div>
+    <p class="tip"><b>Pro tip:</b> Give it the schema first. 80% of "wrong" AI SQL is just the model guessing your columns. Then QA the joins before you trust the numbers.</p>
+  </div>
+
+  <div class="prompt">
+    <h2>2. The Formula Genie (Excel / Sheets)</h2>
+    <div class="saves">Saves ~2 hrs/week</div>
+    <div class="code">Write an Excel formula to [goal].
+My columns: [list them, e.g. A=Date, B=Region, C=Revenue].
+Prefer XLOOKUP/SUMIFS over nested IFs. Explain it in one sentence.</div>
+    <p class="tip"><b>Pro tip:</b> Ask it to "explain in one sentence" so you can defend the formula in a review — and learn it for next time.</p>
+  </div>
+
+  <div class="prompt">
+    <h2>3. The Data Cleaner</h2>
+    <div class="saves">Saves ~3 hrs/week</div>
+    <div class="code">Here is messy data: [paste].
+Standardize dates to YYYY-MM-DD, fix inconsistent casing, trim whitespace,
+flag duplicates and obvious outliers. Return the cleaned data PLUS a bullet
+list of exactly what you changed.</div>
+    <p class="tip"><b>Pro tip:</b> Always ask for "what you changed." That list is your audit trail — never ship cleaned data you can't explain. <b>Strip identifiers first</b> if it's sensitive.</p>
+  </div>
+
+  <div class="prompt">
+    <h2>4. The Exec Summary</h2>
+    <div class="saves">Saves ~2 hrs/week</div>
+    <div class="code">Turn this analysis into a 5-bullet executive summary for non-technical leadership: [paste].
+Lead with business impact ($ / time / risk), not methodology.
+End with one recommended action.</div>
+    <p class="tip"><b>Pro tip:</b> This is the skill that gets analysts promoted. Let AI draft the narrative; you supply the judgment on what actually matters.</p>
+  </div>
+
+  <div class="prompt">
+    <h2>5. The Dashboard Planner</h2>
+    <div class="saves">Saves ~2 hrs/week</div>
+    <div class="code">I have this dataset: [describe columns + what the business cares about].
+Recommend the 4 most decision-useful charts, what question each answers,
+and the best chart type for each. No vanity metrics.</div>
+    <p class="tip"><b>Pro tip:</b> Plan the dashboard before you build it. 30 seconds here saves an afternoon of reworking visuals nobody uses.</p>
+  </div>
+
+  <div class="cta">
+    <h3>Want the full Analyst's AI Toolkit?</h3>
+    <p>Get the deeper prompt packs + a weekly AI-for-analysts tip in your inbox.</p>
+    <a class="btn" href="https://incomeonai.beehiiv.com/subscribe" target="_blank" rel="noopener">Get weekly analyst AI tips →</a>
+  </div>
+
+  <div class="foot">© 2026 IncomeOnAI · AI won't replace analysts. Analysts who use AI will replace the ones who don't.</div>
+</div>
+</body>
+</html>
